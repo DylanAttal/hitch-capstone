@@ -19,11 +19,11 @@ body {
 }
 
 .van {
-  height: 430px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   background-image: url(../../images/dino-reichmuth-115620-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -54,9 +54,41 @@ header {
   font-weight: bold;
 }
 
-.header-right p {
-  display: inline-block;
-  margin-left: 1rem;
+.arrow {
+  height: 4rem;
+  width: 4rem;
+  z-index: 2;
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.bounce {
+  animation: bounce 1.7s infinite;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-30px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }
 
 .log-in,
@@ -77,88 +109,94 @@ header {
   font-weight: bold;
 }
 
-.sub-header p {
-  margin: 0;
-  text-align: center;
-}
-
 .why-hitch {
-  height: 580px;
+  height: 100vh;
   background-image: url(../../images/crisscross-highways.jpg);
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
-.why-hitch h2 {
+h2 {
   margin: 0;
   padding: 5px;
   background-color: #000;
   color: #fff;
 }
 
-.why-hitch-more {
+.more-info {
   padding: 5px;
-  background-color: rgba(255, 255, 255, 0.85);
-  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
   border-radius: 2px;
 }
 
-.why-hitch-more h5 {
+h5 {
   margin: 0;
 }
 
 .why-drive {
-  height: 580px;
+  height: 100vh;
   background-image: url(../../images/night-highways.jpg);
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.why-drive h2 {
-  margin: 0;
-  padding: 5px;
-  background-color: #000;
-  color: #fff;
-}
-
-.why-drive-more {
-  padding: 5px;
-  background-color: rgba(255, 255, 255, 0.85);
-  font-size: 0.8rem;
-  border-radius: 2px;
-}
-
-.why-drive-more h5 {
-  margin: 0;
+  align-items: center;
 }
 
 .how-it-works {
-  height: 580px;
+  height: 100vh;
   background-image: url(../../images/cars.jpg);
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
-.how-it-works h2 {
-  margin: 0;
-  padding: 5px;
-  background-color: #000;
-  color: #fff;
-}
+@media only screen and (min-width: 700px) {
+  .header-left {
+    margin-left: 1.5rem;
+    font-size: 3rem;
+  }
 
-.how-it-works-more {
-  padding: 5px;
-  background-color: rgba(255, 255, 255, 0.85);
-  font-size: 0.8rem;
-  border-radius: 2px;
-}
+  .log-in,
+  .sign-up {
+    margin-right: 0.5rem;
+    font-size: 2rem;
+  }
 
-.how-it-works h5 {
-  margin: 0;
+  .sub-header {
+    font-size: 1.5rem;
+    justify-content: center;
+  }
+
+  .sub-header span {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .van {
+    height: 100vh;
+    background-image: url(../../images/dino-reichmuth-cropped.png);
+  }
+
+  h2 {
+    padding: 1rem;
+    font-size: 2rem;
+  }
+
+  .more-info {
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    border-radius: 0.25rem;
+  }
+
+  .arrow {
+    height: 6rem;
+    width: 6rem;
+  }
 }
