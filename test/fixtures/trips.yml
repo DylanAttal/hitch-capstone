@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  departure_location_address: MyString
+  departure_location_latitude: 9.99
+  departure_location_longitude: 9.99
+  arrival_location_address: MyString
+  arrival_location_latitude: 9.99
+  arrival_location_longitude: 9.99
+  departure_date: 2019-01-09
+  departure_time: 2019-01-09 11:27:51
+  arrival_date: 2019-01-09
+  arrival_time: 2019-01-09 11:27:51
+  rating: 1
+  number_of_seats_available: 1
+  price_per_seat: 1
+  trip_description: MyText
+  person: one
+
+two:
+  departure_location_address: MyString
+  departure_location_latitude: 9.99
+  departure_location_longitude: 9.99
+  arrival_location_address: MyString
+  arrival_location_latitude: 9.99
+  arrival_location_longitude: 9.99
+  departure_date: 2019-01-09
+  departure_time: 2019-01-09 11:27:51
+  arrival_date: 2019-01-09
+  arrival_time: 2019-01-09 11:27:51
+  rating: 1
+  number_of_seats_available: 1
+  price_per_seat: 1
+  trip_description: MyText
+  person: two
