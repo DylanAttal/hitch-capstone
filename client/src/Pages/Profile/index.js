@@ -12,11 +12,7 @@ class Profile extends Component {
         </div>
         <div className="wrapper">
           <div className="picture">
-            <img
-              src={katherine}
-              alt="picture of user"
-              className="profile-picture"
-            />
+            <img src={katherine} alt="user" className="profile-picture" />
           </div>
           <div className="container">
             <div className="container-info">
@@ -39,7 +35,6 @@ class Profile extends Component {
               </div>
             </div>
           </div>
-          <p className="blank">x</p>
         </div>
       </main>
     )
