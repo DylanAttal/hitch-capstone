@@ -23,21 +23,31 @@
   background-color: #fff;
 }
 
-.profile .header {
+.profile header {
   height: 4rem;
   width: 100%;
   margin-top: 0;
   padding-top: 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   background-color: #000;
   color: #fff;
 }
 
-.profile .header h2 {
+.profile header h2 {
   margin-left: 1rem;
+}
+
+.profile .action {
+  margin-right: 2rem;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
 }
 
 .profile .picture {

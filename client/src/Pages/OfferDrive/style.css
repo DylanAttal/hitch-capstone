@@ -2,7 +2,7 @@ html {
   background-color: #e0e0e0;
 }
 
-.details {
+.offer-drive {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -10,14 +10,14 @@ html {
   background-color: #e0e0e0;
 }
 
-.details .wrapper {
+.offer-drive .wrapper {
   width: 380px;
   min-height: calc(100vh - 4rem);
   margin-top: 0;
   background-color: #fff;
 }
 
-.details header {
+.offer-drive header {
   height: 4rem;
   width: 100%;
   margin-top: 0;
@@ -30,11 +30,11 @@ html {
   color: #fff;
 }
 
-.details header h2 {
+.offer-drive header h2 {
   margin-left: 1rem;
 }
 
-.details .action {
+.offer-drive .action {
   margin-right: 2rem;
   border: none;
   background-color: #000;
@@ -44,47 +44,47 @@ html {
   text-decoration: none;
 }
 
-.details .container {
+.offer-drive .container {
   display: flex;
   justify-content: center;
 }
 
-.details .container-info {
+.offer-drive .container-info {
   width: 100%;
   background-color: #fff;
 }
 
-.details .departure-date-time {
+.offer-drive .departure-date-time {
   margin-top: 1rem;
   margin-left: 1rem;
   padding: 0;
 }
 
-.details .departure-date-time p {
+.offer-drive .departure-date-time p {
   margin-top: 0;
 }
 
-.details .arrival-date-time {
+.offer-drive .arrival-date-time {
   margin-top: 2rem;
   margin-left: 1rem;
 }
 
-.details .seats {
+.offer-drive .seats {
   margin-top: 2rem;
   margin-left: 1rem;
 }
 
-.details .passengers {
+.offer-drive .passengers {
   margin-top: 2rem;
   margin-left: 1rem;
 }
 
-.details .comments {
+.offer-drive .comments {
   margin-top: 2rem;
   margin-left: 1rem;
 }
 
-.details .comments-area {
+.offer-drive .comments-area {
   height: 5rem;
   width: 20rem;
 }

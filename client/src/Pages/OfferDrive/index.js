@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import './style.css'
 
-class Details extends Component {
+class OfferDrive extends Component {
   render() {
     return (
-      <main className="details">
+      <main className="offer-drive">
         <header>
-          <h2>Profile</h2>
+          <h2>Offer Drive</h2>
           <div className="actions">
             <Link to="/" className="action">
               Home
@@ -89,4 +89,4 @@ class Details extends Component {
   }
 }
 
-export default Details
+export default OfferDrive

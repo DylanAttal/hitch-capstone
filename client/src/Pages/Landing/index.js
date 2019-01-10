@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+
 import './style.css'
 
 import downArrow from '../../images/Caret_down_font_awesome.svg.png'
@@ -38,8 +40,12 @@ class Landing extends Component {
               <div className="header-wrapper">
                 <div className="header-left">HITCH</div>
                 <div className="header-right">
-                  <button className="log-in">LOG IN</button>
-                  <button className="sign-up">SIGN UP</button>
+                  <Link to="/profile" className="log-in">
+                    LOG IN
+                  </Link>
+                  <Link to="/profile" className="sign-up">
+                    SIGN UP
+                  </Link>
                 </div>
               </div>
               <div className="sub-header">
