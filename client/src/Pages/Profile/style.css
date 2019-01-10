@@ -1,0 +1,95 @@
+html {
+  background-color: #e0e0e0;
+}
+
+main {
+  min-height: 100%;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 380px;
+  min-height: 100%;
+  margin-top: 0;
+  background-color: #fff;
+}
+
+.header {
+  height: 4rem;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.header h2 {
+  margin-left: 1rem;
+}
+
+.picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-picture {
+  height: 380px;
+  width: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container-info {
+  width: 100%;
+  background-color: #fff;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+.name h2 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.bio {
+  display: flex;
+  justify-content: center;
+}
+
+.bio-info {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.email {
+  display: flex;
+  justify-content: center;
+}
+
+.email-info {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.blank {
+  color: #fff;
+}
