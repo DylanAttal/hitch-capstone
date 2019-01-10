@@ -1,24 +1,31 @@
-html {
+@font-face {
+  font-family: 'Cabin';
+  src: url('../../images/Cabin-Regular.ttf');
+}
+
+.profile body {
+  font-family: Cabin;
   background-color: #e0e0e0;
 }
 
-main {
+.profile {
   min-height: 100%;
   margin-top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #e0e0e0;
 }
 
-.wrapper {
+.profile .wrapper {
   width: 380px;
   min-height: 100%;
   margin-top: 0;
   background-color: #fff;
 }
 
-.header {
+.profile .header {
   height: 4rem;
   width: 100%;
   margin-top: 0;
@@ -31,37 +38,37 @@ main {
   color: #fff;
 }
 
-.header h2 {
+.profile .header h2 {
   margin-left: 1rem;
 }
 
-.picture {
+.profile .picture {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.profile-picture {
+.profile .profile-picture {
   height: 380px;
   width: auto;
 }
 
-.container {
+.profile .container {
   display: flex;
   justify-content: center;
 }
 
-.container-info {
+.profile .container-info {
   width: 100%;
   background-color: #fff;
 }
 
-.name {
+.profile .name {
   display: flex;
   justify-content: center;
 }
 
-.name h2 {
+.profile .name h2 {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -70,26 +77,26 @@ main {
   color: #fff;
 }
 
-.bio {
+.profile .bio {
   display: flex;
   justify-content: center;
 }
 
-.bio-info {
+.profile .bio-info {
   width: 100%;
   padding: 0.5rem;
 }
 
-.email {
+.profile .email {
   display: flex;
   justify-content: center;
 }
 
-.email-info {
+.profile .email-info {
   width: 100%;
   padding: 0.5rem;
 }
 
-.blank {
+.profile .blank {
   color: #fff;
 }

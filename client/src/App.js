@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <Router>
         <>
-          <Route path="/" exact component={Profile} />
+          <Route path="/" exact component={Landing} />
           <Route path="/profile" exact component={Profile} />
         </>
       </Router>

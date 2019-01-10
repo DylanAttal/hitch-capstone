@@ -31,7 +31,7 @@ class Landing extends Component {
 
   render() {
     return (
-      <main>
+      <main className="landing">
         <div className="wrapper">
           <section className="van">
             <header>

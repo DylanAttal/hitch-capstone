@@ -6,7 +6,7 @@ import katherine from '../../images/katherine-smith.jpg'
 class Profile extends Component {
   render() {
     return (
-      <main>
+      <main className="profile">
         <div className="header">
           <h2>Profile</h2>
         </div>
@@ -39,7 +39,6 @@ class Profile extends Component {
               </div>
             </div>
           </div>
-          <p className="blank">x</p>
           <p className="blank">x</p>
         </div>
       </main>
