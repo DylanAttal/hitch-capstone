@@ -15,7 +15,7 @@ class Details extends Component {
               Home
             </Link>
             <Link to="/map" className="action">
-              Find a Ride
+              Hitch a Ride
             </Link>
             <Link to="/map" className="action">
               Offer a Drive

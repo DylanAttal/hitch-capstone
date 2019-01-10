@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import DateTime from 'react-datetime'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
+import Map from '../../Components/Map'
+
 import './style.css'
 
 class OfferDrive extends Component {
@@ -15,40 +17,38 @@ class OfferDrive extends Component {
               Home
             </Link>
             <Link to="/map" className="action">
-              Find a Ride
+              Hitch Ride
             </Link>
             <Link to="/map" className="action">
-              Offer a Drive
+              Offer Drive
             </Link>
             <Link to="/map" className="action">
               My Trips
             </Link>
-            <button className="action">Log Out</button>
+            <Link to="/" className="action">
+              Log Out
+            </Link>
           </div>
         </header>
         <div className="wrapper">
           <div className="container">
             <div className="container-info">
+              <div>
+                <p className="locations">Departure and Arrival Locations</p>
+                <Map className="offer-drive-map" />
+              </div>
               <div className="departure-date-time">
-                <p>Departure Date and Time:</p>
+                <p>Departure Date and Time</p>
                 <DateTime />
               </div>
               <div className="arrival-date-time">
-                <p>Arrival Date and Time:</p>
+                <p>Arrival Date and Time</p>
                 <DateTime />
               </div>
-              <div className="ride-or-drive">
-                <label htmlFor="ride-or-drive">
-                  Are you riding or driving?
-                </label>
-                <select name="ride-or-drive">
-                  <option>n/a</option>
-                  <option>Riding</option>
-                  <option>Driving</option>
-                </select>
-              </div>
               <div className="seats">
-                <label htmlFor="number-of-seats">Number of passengers</label>
+                <label htmlFor="number-of-seats">
+                  Number of seats available
+                </label>
                 <select name="number-of-seats">
                   <option>n/a</option>
                   <option>1</option>
@@ -61,25 +61,18 @@ class OfferDrive extends Component {
                   <option>8</option>
                 </select>
               </div>
-              <div className="passengers">
-                <label htmlFor="number-of-passengers">Number of seats</label>
-                <select name="number-of-passengers">
-                  <option>n/a</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                </select>
+              <div className="price">
+                <label htmlFor="price-per-seat">Price per seat $</label>
+                <input type="number" />
               </div>
               <div className="comments">
                 <textarea
                   className="comments-area"
                   placeholder="Additional comments"
                 />
+              </div>
+              <div className="create-drive-div">
+                <button className="create-drive">Offer Drive</button>
               </div>
             </div>
           </div>

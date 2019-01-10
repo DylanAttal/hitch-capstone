@@ -16,15 +16,17 @@ class Profile extends Component {
               Home
             </Link>
             <Link to="/map" className="action">
-              Find a Ride
+              Hitch Ride
             </Link>
             <Link to="/map" className="action">
-              Offer a Drive
+              Offer Drive
             </Link>
             <Link to="/map" className="action">
               My Trips
             </Link>
-            <button className="action">Log Out</button>
+            <Link to="/" className="action">
+              Log Out
+            </Link>
           </div>
         </header>
         <div className="wrapper">
