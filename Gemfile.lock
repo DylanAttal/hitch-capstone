@@ -54,6 +54,7 @@ GEM
     faker (1.9.1)
       i18n (>= 0.7)
     ffi (1.10.0)
+    geocoder (1.5.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.5.1)
@@ -136,6 +137,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   faker (~> 1.9)
+  geocoder (~> 1.5)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
