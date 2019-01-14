@@ -15,7 +15,7 @@ class Profile extends Component {
             <Link to="/" className="action">
               Home
             </Link>
-            <Link to="/map" className="action">
+            <Link to="/search" className="action">
               Hitch Ride
             </Link>
             <Link to="/offerdrive" className="action">
