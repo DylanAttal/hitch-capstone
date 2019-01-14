@@ -50,7 +50,6 @@ class OfferDrive extends Component {
                   Number of seats available
                 </label>
                 <select name="number-of-seats">
-                  <option>n/a</option>
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>

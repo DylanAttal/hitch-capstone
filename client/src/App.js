@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <Router>
         <>
-          <Route path="/" exact component={OfferDrive} />
+          <Route path="/" exact component={Landing} />
           <Route path="/profile" exact component={Profile} />
           <Route path="/offerdrive" exact component={OfferDrive} />
           <Route path="/map" exact component={MapPage} />
