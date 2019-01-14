@@ -88,14 +88,8 @@ html {
   margin-left: 1rem;
 }
 
-.search .comments {
-  margin-top: 2rem;
-  margin-left: 1rem;
-}
-
-.search .comments-area {
-  height: 5rem;
-  width: 20rem;
+.search .search-ride-form {
+  border-bottom: 1px solid #ccc;
 }
 
 .search .create-drive {
@@ -111,4 +105,64 @@ html {
   margin-top: 1rem;
   margin-left: 1rem;
   margin-bottom: 2rem;
+}
+
+.search .card-preview {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ccc;
+}
+
+.search .card-preview-header {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 0.5rem;
+}
+
+.search .thumbnail {
+  height: 4rem;
+  width: auto;
+  border-radius: 50px;
+}
+
+.search .card-preview-text {
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.search .card-map {
+  height: 8rem;
+  width: 100%;
+}
+
+.search .card-preview-secondary-text {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.search .book-ride {
+  height: 30px;
+  width: 130px;
+  margin-right: 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  background-color: #32e440;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search .driver-profile {
+  height: 30px;
+  width: 130px;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  background-color: #00bfff;
+  border-radius: 4px;
+  cursor: pointer;
 }

@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+
   def show
     @trips = Trip.all
 
@@ -22,4 +23,17 @@ class TripsController < ApplicationController
       }     
     }
   end
+
+  def create
+    @trip = Trip.create(trip_params)
+
+    render json: @trip
+  end
+
+  def trip_params
+    params.require(:trip).permit(:departure_location_latitude, :departure_location_longitude, :departure_location_address,
+    :arrival_location_latitude, :arrival_location_longitude, :arrival_location_address, :departure_date, :departure_time, 
+    :arrival_date, :arrival_time, :number_of_seats_available, :price_per_seat)
+  end
+
 end
