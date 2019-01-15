@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get '/people/', to: 'people#show'
   get '/trips/', to: 'trips#show'
+  post '/trips/search', to: 'trips#search'
 
   post '/trips/create', to: 'trips#create'
 

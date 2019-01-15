@@ -69,7 +69,11 @@ class Map extends Component {
   // }
 
   _userClick = event => {
-    console.log('User clicked at ', event.lngLat)
+    // If we also had a prop that is a clickMap handler, call it
+    if (this.props.onClick) {
+      this.props.onClick(event)
+    }
+
     this.setState({
       droppedMarker: {
         longitude: event.lngLat[0],
