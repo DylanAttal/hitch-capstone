@@ -33,10 +33,7 @@ class FixedMap extends Component {
     }
 
     return (
-      <Marker
-        longitude={parseInt(this.props.longitude)}
-        latitude={parseInt(this.props.latitude)}
-      >
+      <Marker longitude={this.props.longitude} latitude={this.props.latitude}>
         <CityPin size={20} />
       </Marker>
     )

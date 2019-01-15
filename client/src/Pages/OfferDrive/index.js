@@ -12,11 +12,7 @@ class OfferDrive extends Component {
     super(props)
 
     this.state = {
-      trips: [],
-      departureDate: 's',
-      departureTime: 's',
-      arrivalDate: 's',
-      arrivalTime: 's'
+      trips: []
     }
   }
 
@@ -32,10 +28,6 @@ class OfferDrive extends Component {
     })
   }
 
-  log = event => {
-    console.log(this.state)
-  }
-
   _submit = event => {
     event.preventDefault()
 
@@ -46,6 +38,26 @@ class OfferDrive extends Component {
       this.setState({
         trips: response.data
       })
+    })
+  }
+
+  _clickDepartureMap = event => {
+    const departure_location_longitude = event.lngLat[0]
+    const departure_location_latitude = event.lngLat[1]
+
+    this.setState({
+      departure_location_longitude,
+      departure_location_latitude
+    })
+  }
+
+  _clickArrivalMap = event => {
+    const arrival_location_longitude = event.lngLat[0]
+    const arrival_location_latitude = event.lngLat[1]
+
+    this.setState({
+      arrival_location_longitude,
+      arrival_location_latitude
     })
   }
 
@@ -75,25 +87,55 @@ class OfferDrive extends Component {
         <div className="wrapper">
           <div className="container">
             <div className="container-info">
-              <div>
-                <p className="locations">Departure and Arrival Locations</p>
-                <Map className="offer-drive-map" />
-              </div>
-              <div className="departure-date-time">
-                <p>Departure Date and Time</p>
-                <DateTime
-                  value={this.state.departureDate}
-                  onChange={this._departureDateChange}
-                />
-              </div>
-              <div className="arrival-date-time">
-                <p>Arrival Date and Time</p>
-                <DateTime
-                  value={this.state.arrivalDate}
-                  onChange={this._arrivalDateChange}
-                />
-              </div>
               <form onSubmit={this._submit}>
+                <input
+                  type="hidden"
+                  value={this.state.departure_location_longitude}
+                  name="trip[departure_location_longitude]"
+                />
+                <input
+                  type="hidden"
+                  value={this.state.departure_location_latitude}
+                  name="trip[departure_location_latitude]"
+                />
+                <input
+                  type="hidden"
+                  value={this.state.arrival_location_longitude}
+                  name="trip[arrival_location_longitude]"
+                />
+                <input
+                  type="hidden"
+                  value={this.state.arrival_location_latitude}
+                  name="trip[arrival_location_latitude]"
+                />
+                <div>
+                  <p className="locations">Departure Location</p>
+                  <Map
+                    className="offer-drive-map"
+                    onClick={this._clickDepartureMap}
+                  />
+                </div>
+                <div>
+                  <p className="locations">Arrival Location</p>
+                  <Map
+                    className="offer-drive-map"
+                    onClick={this._clickArrivalMap}
+                  />
+                </div>
+                <div className="departure-date-time">
+                  <p>Departure Date and Time</p>
+                  <DateTime
+                    dateFormat="YYYY-MM-DD"
+                    inputProps={{ name: 'trip[depart_at]' }}
+                  />
+                </div>
+                <div className="arrival-date-time">
+                  <p>Arrival Date and Time</p>
+                  <DateTime
+                    dateFormat="YYYY-MM-DD"
+                    inputProps={{ name: 'trip[arrive_at]' }}
+                  />
+                </div>
                 <div className="seats">
                   <label htmlFor="number_of_seats_available">
                     Number of seats available
@@ -117,8 +159,6 @@ class OfferDrive extends Component {
                   <button className="create-drive">Offer Drive</button>
                 </div>
               </form>
-
-              <button onClick={this.log}>log state</button>
             </div>
           </div>
         </div>

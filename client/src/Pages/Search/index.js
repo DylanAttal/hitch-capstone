@@ -122,11 +122,17 @@ class Search extends Component {
                 </div>
                 <div className="departure-date-time">
                   <p>Departure Date and Time</p>
-                  <DateTime inputProps={{ name: 'trip[depart_at]' }} />
+                  <DateTime
+                    dateFormat="YYYY-MM-DD"
+                    inputProps={{ name: 'trip[depart_at]' }}
+                  />
                 </div>
                 <div className="arrival-date-time">
                   <p>Arrival Date and Time</p>
-                  <DateTime inputProps={{ name: 'trip[arrive_at]' }} />
+                  <DateTime
+                    dateFormat="YYYY-MM-DD"
+                    inputProps={{ name: 'trip[arrive_at]' }}
+                  />
                 </div>
                 <div className="seats">
                   <label htmlFor="number_of_seats_available">
@@ -160,8 +166,8 @@ class Search extends Component {
                       <div className="card-preview-text">
                         <p>Katherine Smith</p>
                         <p>
-                          {moment(trip.departure_time).format('LT')} -{' '}
-                          {moment(trip.arrival_time).format('LT')}
+                          {moment(trip.depart_at).format('LT')} -{' '}
+                          {moment(trip.arrive_at).format('LT')}
                         </p>
                       </div>
                     </div>
@@ -178,12 +184,13 @@ class Search extends Component {
                     <div className="card-preview-secondary-text">
                       <p>
                         Departing from {trip.departure_location_address} at{' '}
-                        {moment(trip.departure_time).format('LT')} on{' '}
-                        {moment(trip.departure_date).format('MMMM Do YYYY')} and
+                        {moment(trip.depart_at).format('LT')} on{' '}
+                        {moment(trip.depart_at).format('MMMM Do YYYY')} and
                         arriving at {trip.arrival_location_address} at{' '}
-                        {moment(trip.arrival_time).format('LT')} on{' '}
-                        {moment(trip.arrival_date).format('MMMM Do YYYY')}.
-                        Price per seat: ${trip.price_per_seat}
+                        {moment(trip.arrive_at).format('LT')} on{' '}
+                        {moment(trip.arrive_at).format('MMMM Do YYYY')}. Price
+                        per seat: ${trip.price_per_seat} Seats available:{' '}
+                        {trip.number_of_seats_available}
                       </p>
                     </div>
                     <div className="driver-profile-div">
