@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   get '/people/', to: 'people#show'
   get '/trips/', to: 'trips#show'
-  post '/trips/search', to: 'trips#search'
 
-  post '/trips/create', to: 'trips#create'
+  post '/trips/search', to: 'trips#search'
+  post '/trips/create', to: 'trips#create' 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   if Rails.env.production?

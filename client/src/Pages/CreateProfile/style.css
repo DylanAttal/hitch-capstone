@@ -3,12 +3,12 @@
   src: url('../../images/Cabin-Regular.ttf');
 }
 
-.profile body {
+.create-profile body {
   font-family: Cabin;
   background-color: #e0e0e0;
 }
 
-.profile {
+.create-profile {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,14 +16,24 @@
   background-color: #e0e0e0;
 }
 
-.profile .wrapper {
+.create-profile .wrapper {
   width: 380px;
   min-height: calc(100vh - 4rem);
   margin-top: 0;
   background-color: #fff;
 }
 
-.profile header {
+.create-profile .container {
+  display: flex;
+  justify-content: center;
+}
+
+.create-profile .container-info {
+  width: 100%;
+  background-color: #fff;
+}
+
+.create-profile header {
   height: 4rem;
   width: 100%;
   margin-top: 0;
@@ -36,11 +46,11 @@
   color: #fff;
 }
 
-.profile header h2 {
+.create-profile header h2 {
   margin-left: 1rem;
 }
 
-.profile .action {
+.create-profile .action {
   margin-right: 2rem;
   border: none;
   background-color: #000;
@@ -50,58 +60,38 @@
   text-decoration: none;
 }
 
-.profile .picture {
+.create-profile .form-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.profile .profile-picture {
-  height: 380px;
-  width: auto;
+.create-profile .profile-pic {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 65px;
 }
 
-.profile .container {
+.create-profile label {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  color: #505050;
+}
+
+.create-profile .picture-div {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  background-color: #e8e8e8;
 }
 
-.profile .container-info {
-  width: 100%;
-  background-color: #fff;
+.create-profile input {
+  padding: 1rem;
 }
 
-.profile .name {
-  display: flex;
-  justify-content: center;
-  background-color: #000;
-}
-
-.profile .name h2 {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font-size: 2rem;
-  color: #fff;
-}
-
-.profile .bio {
-  display: flex;
-  justify-content: center;
-}
-
-.profile .bio-info {
-  width: 100%;
-  padding: 0.5rem;
-}
-
-.profile .email {
-  display: flex;
-  justify-content: center;
-}
-
-.profile .email-info {
-  width: 100%;
-  padding: 0.5rem;
+.create-profile input[type='text'],
+input[type='number'],
+input[type='password'] {
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: 1rem;
 }

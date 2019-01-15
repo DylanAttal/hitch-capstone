@@ -14,9 +14,9 @@ class FixedMap extends Component {
     this.state = {
       droppedMarker: true,
       viewport: {
-        latitude: parseInt(27.7676),
+        latitude: parseInt(28.7676),
         longitude: parseInt(-82.6403),
-        zoom: 4.5,
+        zoom: 4.3,
         bearing: 0,
         pitch: 0
       }

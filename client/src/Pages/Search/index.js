@@ -66,7 +66,7 @@ class Search extends Component {
     return (
       <main className="search">
         <header>
-          <h2>Search for a Ride</h2>
+          <h2>Hitch Ride</h2>
           <div className="actions">
             <Link to="/" className="action">
               Home
@@ -194,7 +194,12 @@ class Search extends Component {
                       </p>
                     </div>
                     <div className="driver-profile-div">
-                      <button className="driver-profile">DRIVER PROFILE</button>
+                      <Link
+                        to={`/profile/${trip.driver_name}`}
+                        className="driver-profile"
+                      >
+                        DRIVER PROFILE
+                      </Link>
                     </div>
                   </div>
                 )

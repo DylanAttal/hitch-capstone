@@ -38,6 +38,9 @@ class OfferDrive extends Component {
       this.setState({
         trips: response.data
       })
+      console.log(response.data)
+      console.log(this.state.trips)
+      console.log(formData)
     })
   }
 

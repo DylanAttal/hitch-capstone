@@ -34,16 +34,16 @@ class TripsController < ApplicationController
     # If there is a lat and lng for departure, then add another query based on near-ness to that location
     departure_location_latitude = params[:trip][:departure_location_latitude]
     departure_location_longitude = params[:trip][:departure_location_longitude]
-    # if departure_location_latitude.present? && departure_location_longitude.present?
-    #   @trips = @trips.near([departure_location_latitude, departure_location_longitude], 50)
-    # end
+    if departure_location_latitude.present? && departure_location_longitude.present?
+      @trips = @trips.near([departure_location_latitude, departure_location_longitude], 50)
+    end
 
     # If there is a lat and lng for arrival, then add another query based on near-ness to that location
     arrival_location_latitude = params[:trip][:arrival_location_latitude]
     arrival_location_longitude = params[:trip][:arrival_location_longitude]
-    # if arrival_location_latitude.present? && arrival_location_longitude.present?
-    #   @trips = @trips.near([arrival_location_latitude, arrival_location_longitude], 50)
-    # end
+    if arrival_location_latitude.present? && arrival_location_longitude.present?
+      @trips = @trips.near([arrival_location_latitude, arrival_location_longitude], 50)
+    end
 
     if params[:trip][:depart_at].present?
       depart_at = Time.parse(params[:trip][:depart_at])
