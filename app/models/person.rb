@@ -1,7 +1,11 @@
 require 'net/http'
 class Person < ApplicationRecord
+  # Where I am a driver
   has_many :trips
   has_many :rides
+  
+  # Trips where I am a rider
+  has_many :trips_as_rider, through: :rides, class_name: "Trip", source: :person
   
   # current_person.rides.create(trip_id: )
   

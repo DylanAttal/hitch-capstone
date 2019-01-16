@@ -14,8 +14,7 @@ class MyTrips extends Component {
     super(props)
 
     this.state = {
-      person: {},
-      trips: []
+      person: null
     }
   }
 
@@ -35,17 +34,13 @@ class MyTrips extends Component {
         console.log(response.data)
       )
     })
-    axios.get('/trips/').then(response => {
-      this.setState(
-        {
-          trips: response.data
-        },
-        console.log(response.data)
-      )
-    })
   }
 
   render() {
+    if (!this.state.person) {
+      return <div>Loading...</div>
+    }
+
     return (
       <main className="my-trips">
         <header>
@@ -71,6 +66,40 @@ class MyTrips extends Component {
         <div className="wrapper">
           <div className="container">
             <div className="container-info">
+              <div className="drives">
+                <h2 className="title">My Drives</h2>
+                {this.state.person.drives.map(trip => (
+                  <div className="card-preview">
+                    <div className="card-preview-header">
+                      <img
+                        src={trip.driver_avatar_url}
+                        alt="pic"
+                        className="thumbnail"
+                      />
+                      <div className="card-preview-text">
+                        <p>
+                          Driver: {trip.driver_first_name}
+                          {trip.driver_last_name}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="card-preview-secondary-text">
+                      <p>
+                        Departing from {trip.departure_location_address} at
+                        {trip.depart_at} and arriving at an ADDRESS at a TIME on
+                        a DATE.
+                      </p>
+                      <p>Price per seat: $PRICE</p>
+                      <p>Seats available: SEATS</p>
+                    </div>
+                    <div className="driver-profile-div">
+                      <Link to="/" className="driver-profile">
+                        DRIVER PROFILE
+                      </Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
               <div className="rides">
                 <h2 className="title">My Rides</h2>
                 <div className="card-preview">

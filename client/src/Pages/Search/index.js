@@ -183,7 +183,10 @@ class Search extends Component {
                         className="thumbnail"
                       />
                       <div className="card-preview-text">
-                        <p>Driver: {trip.driver_name}</p>
+                        <p>
+                          Driver: {trip.driver_first_name}{' '}
+                          {trip.driver_last_name}
+                        </p>
                       </div>
                     </div>
                     <div className="card-preview-secondary-text">

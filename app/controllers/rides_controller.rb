@@ -1,4 +1,11 @@
 class RidesController < ApplicationController
+
+  def show
+    @rides = Ride.all
+
+    render json: @rides
+  end
+
   def create
     ride = current_person.rides.create(ride_params)
 

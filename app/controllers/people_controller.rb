@@ -3,7 +3,7 @@ class PeopleController < ApplicationController
   def current
     person = current_person
 
-    render json: 
+    render json:
       {
         id: person.id,
         first_name: person.first_name,
@@ -11,7 +11,9 @@ class PeopleController < ApplicationController
         age: person.age,
         bio: person.bio,
         email: person.email,
-        avatar_url: person.avatar_url
+        avatar_url: person.avatar_url,
+        drives: person.trips.map(&:api_json),
+        rides: person.trips_as_rider.map(&:api_json),
       }     
   end
 

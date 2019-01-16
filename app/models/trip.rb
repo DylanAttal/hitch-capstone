@@ -1,9 +1,11 @@
 require 'geocoder/sql'
 
 class Trip < ApplicationRecord
+  # Who is driving on this trip
   belongs_to :person
 
-  # https://guides.rubyonrails.org/active_record_querying.html#scopes
+  # Who is riding on this trip
+  has_many :riders, through: :rides, class_name: "Person", source: :trip
 
   scope :near_departure, -> (latitude, longitude, radius) {
     # Use geocoder to make a query based on the distance to departure location
@@ -16,4 +18,26 @@ class Trip < ApplicationRecord
     distance_sql = Geocoder::Sql.full_distance(latitude, longitude, 'arrival_location_latitude', 'arrival_location_longitude') 
     where("#{distance_sql} < ?", radius)
   }
+
+  def api_json
+    {
+      id: id,
+      departure_location_latitude: departure_location_latitude,
+      departure_location_longitude: departure_location_longitude,
+      departure_location_address: departure_location_address,
+      arrival_location_latitude: arrival_location_latitude,
+      arrival_location_longitude: arrival_location_longitude,
+      arrival_location_address: arrival_location_address,
+      depart_at: depart_at,
+      arrive_at: arrive_at,
+      rating: rating,
+      number_of_seats_available: number_of_seats_available,
+      price_per_seat: price_per_seat,
+      trip_description: trip_description,
+      driver_name: person_id,
+      driver_first_name: person.first_name,
+      driver_last_name: person.last_name,
+      driver_avatar_url: person.avatar_url
+    }
+  end
 end

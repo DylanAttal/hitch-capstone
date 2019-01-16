@@ -1,26 +1,14 @@
 class TripsController < ApplicationController
 
+  def for_rider
+    # All the trips where I am a rider
+    
+  end
+
   def show
     @trips = Trip.all
 
-    render json: @trips.map { |trip|
-      {
-        id: trip.id,
-        departure_location_latitude: trip.departure_location_latitude,
-        departure_location_longitude: trip.departure_location_longitude,
-        departure_location_address: trip.departure_location_address,
-        arrival_location_latitude: trip.arrival_location_latitude,
-        arrival_location_longitude: trip.arrival_location_longitude,
-        arrival_location_address: trip.arrival_location_address,
-        depart_at: trip.depart_at,
-        arrive_at: trip.arrive_at,
-        rating: trip.rating,
-        number_of_seats_available: trip.number_of_seats_available,
-        price_per_seat: trip.price_per_seat,
-        trip_description: trip.trip_description,
-        driver_name: trip.person_id
-      }     
-    }
+    render json: @trips.map(&:api_json)
   end
 
   def create
@@ -70,25 +58,7 @@ class TripsController < ApplicationController
       @trips = @trips.where("price_per_seat <= ?", price_per_seat)
     end
 
-    render json: @trips.map { |trip| 
-      {
-        id: trip.id,
-        departure_location_latitude: trip.departure_location_latitude,
-        departure_location_longitude: trip.departure_location_longitude,
-        departure_location_address: trip.departure_location_address,
-        arrival_location_latitude: trip.arrival_location_latitude,
-        arrival_location_longitude: trip.arrival_location_longitude,
-        arrival_location_address: trip.arrival_location_address,
-        depart_at: trip.depart_at,
-        arrive_at: trip.arrive_at,
-        rating: trip.rating,
-        number_of_seats_available: trip.number_of_seats_available,
-        price_per_seat: trip.price_per_seat,
-        trip_description: trip.trip_description,
-        driver_name: trip.person.name,
-        driver_avatar_url: trip.person.avatar_url
-      }
-    }
+    render json: @trips.map(&:api_json)
   end
 
   def trip_params
