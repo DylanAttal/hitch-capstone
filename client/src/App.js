@@ -37,7 +37,11 @@ class App extends Component {
           <Route
             path="/callback"
             render={() => {
-              auth.handleAuthentication(() => {})
+              auth.handleAuthentication(() => {
+                axios.defaults.headers.common = {
+                  Authorization: auth.authorizationHeader()
+                }
+              })
 
               return <></>
             }}
