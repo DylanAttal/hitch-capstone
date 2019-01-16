@@ -5,29 +5,38 @@ import axios from 'axios'
 import './style.css'
 
 import katherine from '../../images/katherine-smith.jpg'
-import Axios from 'axios'
+
+import auth from '../../auth'
+import history from '../../history'
 
 class Profile extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      people: [{}]
+      person: {}
+    }
+  }
+
+  componentWillMount = () => {
+    // Guard clause to prevent non-logged-in people from accessing user profile
+    if (!auth.isAuthenticated()) {
+      history.replace('/login')
     }
   }
 
   componentDidMount = () => {
-    axios.get('/people/').then(response => {
-      this.setState({
-        people: response.data
-      })
+    axios.get('/people/current').then(response => {
+      this.setState(
+        {
+          person: response.data
+        },
+        console.log(response.data)
+      )
     })
-    console.log(this.props)
   }
 
   render() {
-    const id = this.props.match.params.id
-
     return (
       <main className="profile">
         <header>
@@ -59,18 +68,18 @@ class Profile extends Component {
               <div className="name">
                 <h2 className="profile-name">
                   <span className="first-name">
-                    {this.state.people[0].first_name}
+                    {this.state.person.first_name}
                   </span>{' '}
                   <span className="last-name">
-                    {this.state.people[0].last_name}
+                    {this.state.person.last_name}
                   </span>
                 </h2>
               </div>
               <div className="bio">
-                <p className="bio-info">{this.state.people[0].bio}</p>
+                <p className="bio-info">{this.state.person.bio}</p>
               </div>
               <div className="email">
-                <p className="email-info">{this.state.people[0].email}</p>
+                <p className="email-info">{this.state.person.email}</p>
               </div>
             </div>
           </div>

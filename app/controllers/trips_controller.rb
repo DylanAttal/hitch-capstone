@@ -23,7 +23,7 @@ class TripsController < ApplicationController
   end
 
   def create
-    @trip = Trip.create(trip_params)
+    @trip = current_person.trips.create!(trip_params)
 
     render json: @trip
   end
@@ -35,14 +35,14 @@ class TripsController < ApplicationController
     departure_location_latitude = params[:trip][:departure_location_latitude]
     departure_location_longitude = params[:trip][:departure_location_longitude]
     if departure_location_latitude.present? && departure_location_longitude.present?
-      @trips = @trips.near([departure_location_latitude, departure_location_longitude], 50)
+      @trips = @trips.near_departure(departure_location_latitude, departure_location_longitude, 50)
     end
 
     # If there is a lat and lng for arrival, then add another query based on near-ness to that location
     arrival_location_latitude = params[:trip][:arrival_location_latitude]
     arrival_location_longitude = params[:trip][:arrival_location_longitude]
     if arrival_location_latitude.present? && arrival_location_longitude.present?
-      @trips = @trips.near([arrival_location_latitude, arrival_location_longitude], 50)
+      @trips = @trips.near_arrival(arrival_location_latitude, arrival_location_longitude, 50)
     end
 
     if params[:trip][:depart_at].present?

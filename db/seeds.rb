@@ -30,6 +30,25 @@ Person.create!(first_name: "Karen",
               bio:"Hi, all! I'm Karen, and I'm originally from San Diego, but I'm living and working in Miami now as a marine biologist at the University of Miami. I enjoy going to South Beach whenver possible, and I'm loving the Cuban food in Miami! I've even learned to make tostones from scratch--I'm obsessed with them! I'm always taking trips on the weekends to springs around the state; Rainbow River is my favorite.",
               email: "Karentommygirl7@gmail.com")
 
+Person.create!(first_name: "Mark",
+              last_name: "Tarly",
+              age: 35,
+              bio:"",
+              email: "tarlymark@gmail.com")
+
+Person.create!(first_name: "Kevin",
+              last_name: "Rubinson",
+              age: 22,
+              bio:"Jacksonville native living the young-20s dream of chilling and surfing on the beach everyday. Just working part-time at an ice cream shop making ends meet. I crash at my friends' places over the weekends, so I'm always on the move and looking for a cheap way to get there. Super friendly guy here. Open-minded. I like talking to people from all walks of life. Hopefully I'll be able to move to Hawaii one day and surf there.",
+              email: "rubinsonkevin40@gmail.com")
+
+Person.create!(first_name: "Taylor",
+              last_name: "Shadwell",
+              age: 30,
+              bio:"I'm Taylor Shadwell, a courtroom artist living in Tallahassee, Florida. After graduating from Savannah College of Art and Design and freelancing for several years, I found my passion capturing moments of tension in courtrooms after accompanying my brother to a trial after he was injured by a worksite accident. I spend my free time doodling and writing in my journal. I'm pretty shy, but I open up once I get to know people.",
+              email: "shadwelltaylor210@gmail.com")
+              
+
 Trip.create!(departure_location_address: "2220 Central Avenue, St. Petersburg, FL, 33712",
             departure_location_latitude: 27.7708,
             departure_location_longitude: -82.6635,
@@ -127,4 +146,4 @@ Trip.create!(departure_location_address: "503 1st St N, Jacksonville Beach, FL, 
             price_per_seat: 50,
             trip_description: "Departing 503 1st St N, Jacksonville Beach, FL, 32250 at 4PM on April 20th and arriving at 11011 SW 104th St, Miami, FL, 33176 at 7:30PM on April 20th.",
             person_id: 4)
-            
+

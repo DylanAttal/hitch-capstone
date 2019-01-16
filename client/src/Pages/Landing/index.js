@@ -40,10 +40,10 @@ class Landing extends Component {
               <div className="header-wrapper">
                 <div className="header-left">HITCH</div>
                 <div className="header-right">
-                  <Link to="/profile/1" className="log-in">
+                  <Link to="/login" className="log-in">
                     LOG IN
                   </Link>
-                  <Link to="/profile/1" className="sign-up">
+                  <Link to="/login" className="sign-up">
                     SIGN UP
                   </Link>
                 </div>

@@ -43,20 +43,23 @@ class CreateProfile extends Component {
                   required
                 />
               </div>
-              <label For="first-name">First Name</label>
+              <label htmlFor="first-name">First Name</label>
               <input type="text" name="first-name" required />
 
-              <label For="last-name">Last Name</label>
+              <label htmlFor="last-name">Last Name</label>
               <input type="text" name="last-name" required />
 
-              <label For="phone-number">Phone Number</label>
+              <label htmlFor="phone-number">Phone Number</label>
               <input type="number" name="phone-number" required />
 
-              <label For="email">Email</label>
+              <label htmlFor="email">Email</label>
               <input type="text" name="email" required />
 
-              <label For="password">Password</label>
+              <label htmlFor="password">Password</label>
               <input type="password" name="password" required />
+
+              <label htmlFor="bio">Bio</label>
+              <input type="textarea" />
             </div>
           </form>
         </div>

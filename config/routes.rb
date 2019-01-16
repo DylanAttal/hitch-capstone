@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get '/people/', to: 'people#show'
+  get '/people/current', to: 'people#current'
   get '/trips/', to: 'trips#show'
 
   post '/trips/search', to: 'trips#search'

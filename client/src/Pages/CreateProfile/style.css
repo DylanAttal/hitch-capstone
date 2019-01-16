@@ -89,8 +89,9 @@
 }
 
 .create-profile input[type='text'],
-input[type='number'],
-input[type='password'] {
+.create-profile input[type='number'],
+.create-profile input[type='password'],
+.create-profile input[type='textarea'] {
   border: none;
   border-bottom: 1px solid grey;
   font-size: 1rem;

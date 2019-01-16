@@ -1,8 +1,9 @@
 class PeopleController < ApplicationController
-  def show
-    @people = Person.all
 
-    render json: @people.map { |person|
+  def current
+    person = current_person
+
+    render json: 
       {
         id: person.id,
         first_name: person.first_name,
@@ -11,6 +12,6 @@ class PeopleController < ApplicationController
         bio: person.bio,
         email: person.email
       }     
-    }
   end
+
 end

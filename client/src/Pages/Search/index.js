@@ -88,7 +88,11 @@ class Search extends Component {
         <div className="wrapper">
           <div className="container">
             <div className="container-info">
-              <form onSubmit={this._search} className="search-ride-form">
+              <form
+                onSubmit={this._search}
+                autoComplete="off"
+                className="search-ride-form"
+              >
                 <input
                   type="hidden"
                   value={this.state.departure_location_longitude}
@@ -171,12 +175,12 @@ class Search extends Component {
                         </p>
                       </div>
                     </div>
-                    Departure Location:
+                    <p className="location">Departure Location:</p>
                     <FixedMap
                       latitude={trip.departure_location_latitude}
                       longitude={trip.departure_location_longitude}
                     />
-                    Arrival location:
+                    <p className="location">Arrival location:</p>
                     <FixedMap
                       latitude={trip.arrival_location_latitude}
                       longitude={trip.arrival_location_longitude}
@@ -188,10 +192,10 @@ class Search extends Component {
                         {moment(trip.depart_at).format('MMMM Do YYYY')} and
                         arriving at {trip.arrival_location_address} at{' '}
                         {moment(trip.arrive_at).format('LT')} on{' '}
-                        {moment(trip.arrive_at).format('MMMM Do YYYY')}. Price
-                        per seat: ${trip.price_per_seat} Seats available:{' '}
-                        {trip.number_of_seats_available}
+                        {moment(trip.arrive_at).format('MMMM Do YYYY')}.
                       </p>
+                      <p>Price per seat: ${trip.price_per_seat}</p>
+                      <p>Seats available: {trip.number_of_seats_available}</p>
                     </div>
                     <div className="driver-profile-div">
                       <Link
