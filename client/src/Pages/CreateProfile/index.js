@@ -21,10 +21,10 @@ class CreateProfile extends Component {
             <Link to="/offerdrive" className="action">
               Offer Drive
             </Link>
-            <Link to="/map" className="action">
+            <Link to="/mytrips" className="action">
               My Trips
             </Link>
-            <Link to="/" className="action">
+            <Link to="/logout" className="action">
               Log Out
             </Link>
           </div>

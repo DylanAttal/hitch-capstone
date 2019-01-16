@@ -27,13 +27,9 @@ class Profile extends Component {
 
   componentDidMount = () => {
     axios.get('/people/current').then(response => {
-      this.setState(
-        {
-          person: response.data
-        },
-        console.log(response.data),
-        console.log(this.state.person.avatar_url)
-      )
+      this.setState({
+        person: response.data
+      })
     })
   }
 
@@ -52,7 +48,7 @@ class Profile extends Component {
             <Link to="/offerdrive" className="action">
               Offer Drive
             </Link>
-            <Link to="/map" className="action">
+            <Link to="/mytrips" className="action">
               My Trips
             </Link>
             <Link to="/logout" className="action">

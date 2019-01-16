@@ -76,7 +76,7 @@ class OfferDrive extends Component {
             <Link to="/offerdrive" className="action">
               Offer Drive
             </Link>
-            <Link to="/map" className="action">
+            <Link to="/mytrips" className="action">
               My Trips
             </Link>
             <Link to="/logout" className="action">

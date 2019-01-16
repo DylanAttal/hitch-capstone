@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  post 'rides/create', to: "rides#create"
+  
   get '/people/current', to: 'people#current'
   get '/people/', to: 'people#show'
   get '/trips/', to: 'trips#show'

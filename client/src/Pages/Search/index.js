@@ -35,7 +35,6 @@ class Search extends Component {
     const form = event.target
 
     const formData = new FormData(form)
-    console.log(formData)
 
     axios.post('/trips/search', formData).then(response => {
       this.setState({ trips: response.data })
@@ -62,6 +61,18 @@ class Search extends Component {
     })
   }
 
+  _bookRide = event => {
+    event.preventDefault()
+
+    const form = event.target
+
+    const formData = new FormData(form)
+
+    axios.post('/rides/create', formData).then(response => {
+      // What to do here?
+    })
+  }
+
   render() {
     return (
       <main className="search">
@@ -77,7 +88,7 @@ class Search extends Component {
             <Link to="/offerdrive" className="action">
               Offer Drive
             </Link>
-            <Link to="/map" className="action">
+            <Link to="/mytrips" className="action">
               My Trips
             </Link>
             <Link to="/logout" className="action">
@@ -166,9 +177,13 @@ class Search extends Component {
                 return (
                   <div className="card-preview" key={index}>
                     <div className="card-preview-header">
-                      <img src={katherine} alt="pic" className="thumbnail" />
+                      <img
+                        src={trip.driver_avatar_url}
+                        alt="pic"
+                        className="thumbnail"
+                      />
                       <div className="card-preview-text">
-                        <p>Driver: Katherine Smith</p>
+                        <p>Driver: {trip.driver_name}</p>
                       </div>
                     </div>
                     <div className="card-preview-secondary-text">
@@ -184,12 +199,24 @@ class Search extends Component {
                       <p>Seats available: {trip.number_of_seats_available}</p>
                     </div>
                     <div className="driver-profile-div">
-                      <Link
-                        to={`/profile/${trip.driver_name}`}
-                        className="driver-profile"
-                      >
-                        DRIVER PROFILE
-                      </Link>
+                      <form onSubmit={this._bookRide}>
+                        <Link
+                          to={`/profile/${trip.driver_name}`}
+                          className="driver-profile"
+                        >
+                          DRIVER PROFILE
+                        </Link>
+
+                        <input
+                          type="hidden"
+                          name="ride[trip_id]"
+                          value={trip.id}
+                        />
+
+                        <button type="submit" className="book-ride">
+                          BOOK RIDE
+                        </button>
+                      </form>
                     </div>
                   </div>
                 )

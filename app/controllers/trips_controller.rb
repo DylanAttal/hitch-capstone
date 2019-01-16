@@ -5,6 +5,7 @@ class TripsController < ApplicationController
 
     render json: @trips.map { |trip|
       {
+        id: trip.id,
         departure_location_latitude: trip.departure_location_latitude,
         departure_location_longitude: trip.departure_location_longitude,
         departure_location_address: trip.departure_location_address,
@@ -71,6 +72,7 @@ class TripsController < ApplicationController
 
     render json: @trips.map { |trip| 
       {
+        id: trip.id,
         departure_location_latitude: trip.departure_location_latitude,
         departure_location_longitude: trip.departure_location_longitude,
         departure_location_address: trip.departure_location_address,
@@ -83,7 +85,8 @@ class TripsController < ApplicationController
         number_of_seats_available: trip.number_of_seats_available,
         price_per_seat: trip.price_per_seat,
         trip_description: trip.trip_description,
-        driver_name: trip.person_id
+        driver_name: trip.person.name,
+        driver_avatar_url: trip.person.avatar_url
       }
     }
   end

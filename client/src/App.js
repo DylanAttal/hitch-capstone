@@ -7,6 +7,7 @@ import Profile from './Pages/Profile'
 import Search from './Pages/Search'
 import OfferDrive from './Pages/OfferDrive'
 import CreateProfile from './Pages/CreateProfile'
+import MyTrips from './Pages/MyTrips'
 
 import auth from './auth'
 
@@ -51,6 +52,7 @@ class App extends Component {
           <Route path="/people/current" exact component={Profile} />
           <Route path="/search" exact component={Search} />
           <Route path="/offerdrive" exact component={OfferDrive} />
+          <Route path="/mytrips" exact component={MyTrips} />
         </>
       </Router>
     )

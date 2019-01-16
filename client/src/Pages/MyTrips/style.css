@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'Cabin';
+  src: url('../../images/Cabin-Regular.ttf');
+}
+
+.my-trips body {
+  font-family: Cabin;
+  background-color: #e0e0e0;
+}
+
+.my-trips {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e0e0;
+}
+
+.my-trips .wrapper {
+  width: 380px;
+  min-height: calc(100vh - 4rem);
+  margin-top: 0;
+  background-color: #fff;
+}
+
+.my-trips header {
+  height: 4rem;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.my-trips header h2 {
+  margin-left: 1rem;
+}
+
+.my-trips .action {
+  margin-right: 2rem;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.my-trips .title {
+  border-bottom: 1px solid #000;
+}
+
+.my-trips .picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-trips .my-trips-picture {
+  height: 380px;
+  width: auto;
+}
+
+.my-trips .container {
+  display: flex;
+  justify-content: center;
+}
+
+.my-trips .container-info {
+  width: 100%;
+  background-color: #fff;
+}
+
+.my-trips .name {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+}
+
+.my-trips .name h2 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.my-trips .bio {
+  display: flex;
+  justify-content: center;
+}
+
+.my-trips .bio-info {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.my-trips .email {
+  display: flex;
+  justify-content: center;
+}
+
+.my-trips .email-info {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.my-trips .locations {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.my-trips-map {
+  width: 380px;
+}
+
+.my-trips .seats {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.my-trips .price {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.my-trips .my-trips-ride-form {
+  border-bottom: 1px solid #ccc;
+}
+
+.my-trips .create-drive {
+  height: 30px;
+  width: 130px;
+  margin-right: 10px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  background-color: #ccc;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.my-trips .create-drive-div {
+  border-bottom: 40px solid #ccc;
+}
+
+.my-trips .card-preview {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 5px solid #ccc;
+}
+
+.my-trips .card-preview p {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.my-trips .card-preview-header {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 0.5rem;
+  background-color: #fff;
+}
+
+.my-trips .thumbnail {
+  height: 4rem;
+  width: auto;
+  border-radius: 50px;
+}
+
+.my-trips .card-preview-text {
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.my-trips .card-map {
+  height: 8rem;
+  width: 100%;
+}
+
+.my-trips .card-preview-secondary-text {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.my-trips .book-ride {
+  height: 100%;
+  width: 130px;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  background-color: #32e440;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.my-trips .driver-profile-div {
+  height: 30px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.my-trips .driver-profile {
+  height: 100%;
+  width: 130px;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  background-color: #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
