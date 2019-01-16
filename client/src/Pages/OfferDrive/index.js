@@ -67,8 +67,8 @@ class OfferDrive extends Component {
         <header>
           <h2>Offer Drive</h2>
           <div className="actions">
-            <Link to="/" className="action">
-              Home
+            <Link to="/people/current" className="action">
+              Profile
             </Link>
             <Link to="/search" className="action">
               Hitch Ride
