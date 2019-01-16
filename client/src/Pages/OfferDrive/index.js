@@ -79,7 +79,7 @@ class OfferDrive extends Component {
             <Link to="/map" className="action">
               My Trips
             </Link>
-            <Link to="/" className="action">
+            <Link to="/logout" className="action">
               Log Out
             </Link>
           </div>

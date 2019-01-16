@@ -31,7 +31,8 @@ class Profile extends Component {
         {
           person: response.data
         },
-        console.log(response.data)
+        console.log(response.data),
+        console.log(this.state.person.avatar_url)
       )
     })
   }
@@ -54,14 +55,18 @@ class Profile extends Component {
             <Link to="/map" className="action">
               My Trips
             </Link>
-            <Link to="/" className="action">
+            <Link to="/logout" className="action">
               Log Out
             </Link>
           </div>
         </header>
         <div className="wrapper">
           <div className="picture">
-            <img src={katherine} alt="user" className="profile-picture" />
+            <img
+              src={this.state.person.avatar_url}
+              alt="user"
+              className="profile-picture"
+            />
           </div>
           <div className="container">
             <div className="container-info">

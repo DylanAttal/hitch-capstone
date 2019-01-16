@@ -80,7 +80,7 @@ class Search extends Component {
             <Link to="/map" className="action">
               My Trips
             </Link>
-            <Link to="/" className="action">
+            <Link to="/logout" className="action">
               Log Out
             </Link>
           </div>
@@ -168,23 +168,9 @@ class Search extends Component {
                     <div className="card-preview-header">
                       <img src={katherine} alt="pic" className="thumbnail" />
                       <div className="card-preview-text">
-                        <p>Katherine Smith</p>
-                        <p>
-                          {moment(trip.depart_at).format('LT')} -{' '}
-                          {moment(trip.arrive_at).format('LT')}
-                        </p>
+                        <p>Driver: Katherine Smith</p>
                       </div>
                     </div>
-                    <p className="location">Departure Location:</p>
-                    <FixedMap
-                      latitude={trip.departure_location_latitude}
-                      longitude={trip.departure_location_longitude}
-                    />
-                    <p className="location">Arrival location:</p>
-                    <FixedMap
-                      latitude={trip.arrival_location_latitude}
-                      longitude={trip.arrival_location_longitude}
-                    />
                     <div className="card-preview-secondary-text">
                       <p>
                         Departing from {trip.departure_location_address} at{' '}
