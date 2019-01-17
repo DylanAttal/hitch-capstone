@@ -27,13 +27,14 @@ class MyTrips extends Component {
   }
 
   componentDidMount = () => {
+    this.loadTrips()
+  }
+
+  loadTrips = () => {
     axios.get('/people/current').then(response => {
-      this.setState(
-        {
-          person: response.data
-        },
-        console.log(response.data)
-      )
+      this.setState({
+        person: response.data
+      })
     })
   }
 
@@ -47,7 +48,7 @@ class MyTrips extends Component {
 
   _deleteDrive = (trip_id, event) => {
     axios.delete(`/trips/delete/${trip_id}`).then(response => {
-      window.location.reload()
+      this.loadTrips()
     })
   }
 
