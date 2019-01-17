@@ -1,5 +1,11 @@
 class PeopleController < ApplicationController
 
+  def person_by_id
+    @person = Person.find(params[:id])
+
+    render json: @person
+  end
+
   def current
     person = current_person
 

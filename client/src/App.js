@@ -4,6 +4,7 @@ import axios from 'axios'
 
 import Landing from './Pages/Landing'
 import Profile from './Pages/Profile'
+import ProfileID from './Pages/ProfileID'
 import Search from './Pages/Search'
 import OfferDrive from './Pages/OfferDrive'
 import CreateProfile from './Pages/CreateProfile'
@@ -50,6 +51,7 @@ class App extends Component {
           <Route path="/" exact component={Landing} />
           <Route path="/createprofile" exact component={CreateProfile} />
           <Route path="/people/current" exact component={Profile} />
+          <Route path="/people/:id" exact component={ProfileID} />
           <Route path="/search" exact component={Search} />
           <Route path="/offerdrive" exact component={OfferDrive} />
           <Route path="/mytrips" exact component={MyTrips} />

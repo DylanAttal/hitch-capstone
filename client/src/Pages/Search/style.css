@@ -141,7 +141,7 @@ html {
 .search .thumbnail {
   height: 4rem;
   width: auto;
-  border-radius: 50px;
+  border-radius: 500px;
 }
 
 .search .card-preview-text {

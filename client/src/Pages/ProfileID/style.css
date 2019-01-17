@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'Cabin';
+  src: url('../../images/Cabin-Regular.ttf');
+}
+
+.profile-id body {
+  font-family: Cabin;
+  background-color: #e0e0e0;
+}
+
+.profile-id {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e0e0;
+}
+
+.profile-id .wrapper {
+  width: 380px;
+  min-height: calc(100vh - 4rem);
+  margin-top: 0;
+  background-color: #fff;
+}
+
+.profile-id header {
+  height: 4rem;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.profile-id header h2 {
+  margin-left: 1rem;
+}
+
+.profile-id .action {
+  margin-right: 2rem;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.profile-id .picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-id .profile-id-picture {
+  height: 380px;
+  width: auto;
+}
+
+.profile-id .container {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-id .container-info {
+  width: 100%;
+  background-color: #fff;
+}
+
+.profile-id .name {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+}
+
+.profile-id .name h2 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.profile-id .bio {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-id .bio-info {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.profile-id .email {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-id .email-info {
+  width: 100%;
+  padding: 0.5rem;
+}

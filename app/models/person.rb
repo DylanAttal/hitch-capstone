@@ -11,7 +11,7 @@ class Person < ApplicationRecord
   
   def self.from_auth_hash(payload)
     Person.find_or_create_by(auth_sub: payload["sub"]) do |person|
-      # This code is called whenever we create a Person for the first time.
+      # This code is called whenever a Person is created for the first time.
 
       # This code stores their name
       person.first_name = payload["given_name"]

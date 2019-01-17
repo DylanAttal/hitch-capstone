@@ -204,7 +204,7 @@ class Search extends Component {
                     <div className="driver-profile-div">
                       <form onSubmit={this._bookRide}>
                         <Link
-                          to={`/profile/${trip.driver_name}`}
+                          to={`/people/${trip.driver_name}`}
                           className="driver-profile"
                         >
                           DRIVER PROFILE
