@@ -19,10 +19,16 @@ class Trip < ApplicationRecord
     where("#{distance_sql} < ?", radius)
   }
 
-  reverse_geocoded_by :departure_location_latitude, :departure_location_longitude, address: :departure_location_address
-  reverse_geocoded_by :arrival_location_latitude, :arrival_location_longitude, address: :arrival_location_address 
+  # Reverse geocode all the things
+  after_validation :reverse_geocode_trip
 
-  # do |obj, results|
+  # Take the depature and arrival locations and look them up
+  def reverse_geocode_trip
+    self.departure_location_address ||= Geocoder.search([departure_location_latitude, departure_location_longitude]).first.address
+    self.arrival_location_address   ||= Geocoder.search([arrival_location_latitude, arrival_location_longitude]).first.address
+  end
+
+    # do |obj, results|
   #   if geo = results.first
   #     obj.street  = geo.address.split(',')[0]
   #     obj.city = geo.city

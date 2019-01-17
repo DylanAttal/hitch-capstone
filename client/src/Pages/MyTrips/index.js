@@ -37,6 +37,10 @@ class MyTrips extends Component {
     })
   }
 
+  _deleteDrive = event => {
+    axios.delete('/mytrips/delete').then(response => {})
+  }
+
   render() {
     if (!this.state.person) {
       return <div>Loading...</div>
@@ -97,7 +101,12 @@ class MyTrips extends Component {
                       <p>Seats offered: {trip.number_of_seats_available}</p>
                     </div>
                     <div className="driver-profile-div">
-                      <button className="cancel-drive">DELETE DRIVE</button>
+                      <button
+                        className="cancel-drive"
+                        onClick={this._deleteDrive}
+                      >
+                        DELETE DRIVE
+                      </button>
                     </div>
                   </div>
                 ))}
