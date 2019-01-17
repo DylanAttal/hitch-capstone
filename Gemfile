@@ -50,3 +50,6 @@ gem "faker", "~> 1.9"
 gem "geocoder", "~> 1.5"
 
 gem "jwt", "~> 2.1"
+
+gem "cloudinary", "~> 1.11"
+gem "activestorage-cloudinary-service", "~> 0.2.3"
