@@ -6,6 +6,7 @@ import moment from 'moment'
 
 import './style.css'
 
+import history from '../../history'
 import Map from '../../Components/Map'
 import FixedMap from '../../Components/FixedMap'
 
@@ -69,7 +70,7 @@ class Search extends Component {
     const formData = new FormData(form)
 
     axios.post('/rides/create', formData).then(response => {
-      // What to do here?
+      history.push('/new_ride')
     })
   }
 
@@ -170,7 +171,7 @@ class Search extends Component {
                   <input type="number" name="trip[price_per_seat]" />
                 </div>
                 <div className="create-drive-div">
-                  <button className="create-drive">Search</button>
+                  <button className="search-button">Search</button>
                 </div>
               </form>
               {this.state.trips.map((trip, index) => {
@@ -203,11 +204,10 @@ class Search extends Component {
                     </div>
                     <div className="driver-profile-div">
                       <form onSubmit={this._bookRide}>
-                        <Link
-                          to={`/people/${trip.driver_name}`}
-                          className="driver-profile"
-                        >
-                          DRIVER PROFILE
+                        <Link to={`/people/${trip.driver_name}`}>
+                          <button className="driver-profile">
+                            DRIVER PROFILE
+                          </button>
                         </Link>
 
                         <input

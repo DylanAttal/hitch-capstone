@@ -1,8 +1,15 @@
 class TripsController < ApplicationController
 
-  def for_rider
-    # All the trips where I am a rider
-    
+  def new_drive
+  end
+
+  def new_drive
+  end
+
+  def delete
+    @trip = current_person.trips.delete!(trip_params)
+
+    render json: @trip
   end
 
   def show
@@ -62,7 +69,7 @@ class TripsController < ApplicationController
   end
 
   def trip_params
-    params.require(:trip).permit(:departure_location_latitude, :departure_location_longitude, :departure_location_address,
+    params.require(:trip).permit(:id, :departure_location_latitude, :departure_location_longitude, :departure_location_address,
     :arrival_location_latitude, :arrival_location_longitude, :arrival_location_address, :depart_at, :arrive_at, 
     :number_of_seats_available, :price_per_seat)
   end

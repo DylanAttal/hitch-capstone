@@ -96,6 +96,9 @@ class MyTrips extends Component {
                       <p>Price per seat: ${trip.price_per_seat}</p>
                       <p>Seats offered: {trip.number_of_seats_available}</p>
                     </div>
+                    <div className="driver-profile-div">
+                      <button className="cancel-drive">DELETE DRIVE</button>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -130,11 +133,10 @@ class MyTrips extends Component {
                         <p>Seats offered: {trip.number_of_seats_available}</p>
                       </div>
                       <div className="driver-profile-div">
-                        <Link
-                          to={`/people/${trip.driver_name}`}
-                          className="driver-profile"
-                        >
-                          DRIVER PROFILE
+                        <Link to={`/people/${trip.driver_name}`}>
+                          <button className="driver-profile">
+                            DRIVER PROFILE
+                          </button>
                         </Link>
                       </div>
                     </div>

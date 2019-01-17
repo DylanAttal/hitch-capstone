@@ -3,6 +3,7 @@ import DateTime from 'react-datetime'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 
+import history from '../../history'
 import Map from '../../Components/Map'
 
 import './style.css'
@@ -35,9 +36,12 @@ class OfferDrive extends Component {
     const formData = new FormData(form)
 
     axios.post('/trips/create', formData).then(response => {
-      this.setState({
-        trips: response.data
-      })
+      this.setState(
+        {
+          trips: response.data
+        },
+        history.push('/new_drive')
+      )
     })
   }
 

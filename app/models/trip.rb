@@ -19,6 +19,22 @@ class Trip < ApplicationRecord
     where("#{distance_sql} < ?", radius)
   }
 
+  reverse_geocoded_by :departure_location_latitude, :departure_location_longitude, address: :departure_location_address
+  reverse_geocoded_by :arrival_location_latitude, :arrival_location_longitude, address: :arrival_location_address 
+
+  # do |obj, results|
+  #   if geo = results.first
+  #     obj.street  = geo.address.split(',')[0]
+  #     obj.city = geo.city
+  #     obj.state = geo.state
+  #     obj.zip = geo.postal_code
+  #   end
+  # end
+
+  # def address
+  #   self.street + self.city + self.state + self.postal_code
+  # end
+
   def api_json
     {
       id: id,
