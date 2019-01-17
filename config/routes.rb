@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get '/people/current/', to: 'people#current'
   get '/people/', to: 'people#show'
-  get '/people/:id', to: 'people#person_by_id'
+  get '/people/:id/', to: 'people#person_by_id'
   get '/trips/', to: 'trips#show'
   get '/rides/', to: 'rides#show'
 

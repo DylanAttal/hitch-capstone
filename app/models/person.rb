@@ -5,7 +5,7 @@ class Person < ApplicationRecord
   has_many :rides
   
   # Trips where I am a rider
-  has_many :trips_as_rider, through: :rides, class_name: "Trip", source: :person
+  has_many :trips_as_rider, through: :rides, class_name: "Trip", source: :trip
   
   # current_person.rides.create(trip_id: )
   

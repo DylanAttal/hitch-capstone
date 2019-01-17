@@ -69,8 +69,8 @@ class MyTrips extends Component {
             <div className="container-info">
               <div className="drives">
                 <h2 className="title">My Drives</h2>
-                {this.state.person.drives.map(trip => (
-                  <div className="card-preview">
+                {this.state.person.drives.map((trip, index) => (
+                  <div className="card-preview" key={index}>
                     <div className="card-preview-header">
                       <img
                         src={trip.driver_avatar_url}
@@ -130,7 +130,10 @@ class MyTrips extends Component {
                         <p>Seats offered: {trip.number_of_seats_available}</p>
                       </div>
                       <div className="driver-profile-div">
-                        <Link to="/" className="driver-profile">
+                        <Link
+                          to={`/people/${trip.driver_name}`}
+                          className="driver-profile"
+                        >
                           DRIVER PROFILE
                         </Link>
                       </div>
