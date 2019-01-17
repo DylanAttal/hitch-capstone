@@ -42,6 +42,11 @@ html {
   cursor: pointer;
   font-size: 1rem;
   text-decoration: none;
+  font-weight: bold;
+}
+
+.search .action:hover {
+  color: #007bff;
 }
 
 .search .container {
@@ -136,7 +141,7 @@ html {
 }
 
 .search .create-drive-div {
-  border-bottom: 40px solid #ccc;
+  border-bottom: 50px solid #e0e0e0;
 }
 
 .search .card-preview {

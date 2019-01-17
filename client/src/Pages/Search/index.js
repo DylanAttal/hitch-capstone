@@ -22,13 +22,13 @@ class Search extends Component {
     }
   }
 
-  componentDidMount = () => {
-    axios.get('/trips/').then(response => {
-      this.setState({
-        trips: response.data
-      })
-    })
-  }
+  // componentDidMount = () => {
+  //   axios.get('/trips/').then(response => {
+  //     this.setState({
+  //       trips: response.data
+  //     })
+  //   })
+  // }
 
   _search = event => {
     event.preventDefault()

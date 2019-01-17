@@ -81,7 +81,7 @@ Person.create!(first_name: "Matt",
               age: 21,
               bio:"Black belt in karate who works as a karate teacher. Karate has been the most important part of my life for many years. I fell in love with the sport when I was six years old, and I competed all throughout middle and high school. I chose to pursue the sport professionally, but didn't make it to the Olympics, unfortunately. Now, I pass down the skills I learned to younger generations.",
               email: "reismanmatt23@gmail.com",
-              avatar_url: "http://www.urbasm.com/wp-content/uploads/2012/11/How-to-be-a-better-man.jpg")
+              avatar_url: "https://www.celticclothing.com/wp-content/uploads/Quiet-Man-Cap-335-1-1001.jpg")
 
 Person.create!(first_name: "Molly",
               last_name: "Delatre",
@@ -340,7 +340,7 @@ Trip.create!(departure_location_address: nil,
             departure_location_latitude: 39.643382,
             departure_location_longitude: -106.379475,
             arrival_location_address: nil,
-            arrival_location_latitude: 39.745459,,
+            arrival_location_latitude: 39.745459,
             arrival_location_longitude: -104.988398,
             depart_at: "2019-05-31 05:00 AM EST",
             arrive_at: "2019-05-31 08:30 AM EST",
