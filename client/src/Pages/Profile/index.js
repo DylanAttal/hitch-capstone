@@ -33,6 +33,8 @@ class Profile extends Component {
     })
   }
 
+  _updateProfile = event => {}
+
   render() {
     return (
       <main className="profile">
@@ -76,11 +78,11 @@ class Profile extends Component {
                   </span>
                 </h2>
               </div>
-              <div className="bio">
-                <p className="bio-info">{this.state.person.bio}</p>
-              </div>
               <div className="email">
                 <p className="email-info">{this.state.person.email}</p>
+              </div>
+              <div className="bio">
+                <p className="bio-info">{this.state.person.bio}</p>
               </div>
             </div>
           </div>

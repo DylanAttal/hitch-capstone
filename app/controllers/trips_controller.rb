@@ -7,9 +7,11 @@ class TripsController < ApplicationController
   end
 
   def delete
-    @trip = current_person.trips.delete!(trip_params)
+    trip = current_person.trips.find(params[:id])
 
-    render json: @trip
+    trip.destroy
+
+    render json: trip
   end
 
   def show

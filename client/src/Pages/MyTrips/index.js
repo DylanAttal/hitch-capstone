@@ -37,8 +37,18 @@ class MyTrips extends Component {
     })
   }
 
-  _deleteDrive = event => {
-    axios.delete('/mytrips/delete').then(response => {})
+  deleteAlbum = (album_id, event) => {
+    event.preventDefault()
+
+    axios.delete(`/api/albums/${album_id}`).then(response => {
+      this.loadAlbums()
+    })
+  }
+
+  _deleteDrive = (trip_id, event) => {
+    axios.delete(`/trips/delete/${trip_id}`).then(response => {
+      window.location.reload()
+    })
   }
 
   render() {
@@ -103,7 +113,7 @@ class MyTrips extends Component {
                     <div className="driver-profile-div">
                       <button
                         className="cancel-drive"
-                        onClick={this._deleteDrive}
+                        onClick={this._deleteDrive.bind(this, trip.id)}
                       >
                         DELETE DRIVE
                       </button>
