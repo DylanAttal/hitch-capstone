@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Router, Switch, Route, Link } from 'react-router-dom'
+import { Router, Switch, Route } from 'react-router-dom'
 import axios from 'axios'
 
 import Landing from './Pages/Landing'
@@ -7,7 +7,6 @@ import Profile from './Pages/Profile'
 import ProfileID from './Pages/ProfileID'
 import Search from './Pages/Search'
 import OfferDrive from './Pages/OfferDrive'
-import CreateProfile from './Pages/CreateProfile'
 import MyTrips from './Pages/MyTrips'
 import NewRide from './Pages/NewRide'
 import NewDrive from './Pages/NewDrive'
@@ -52,7 +51,6 @@ class App extends Component {
           />
           <Switch>
             <Route path="/" exact component={Landing} />
-            <Route path="/createprofile" exact component={CreateProfile} />
             <Route path="/people/current" exact component={Profile} />
             <Route path="/people/:id" exact component={ProfileID} />
             <Route path="/search" exact component={Search} />

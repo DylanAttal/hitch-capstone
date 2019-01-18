@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 import './style.css'
-
-import katherine from '../../images/katherine-smith.jpg'
 
 import auth from '../../auth'
 import history from '../../history'
@@ -14,7 +12,7 @@ class Profile extends Component {
     super(props)
 
     this.state = {
-      person: {}
+      person: null
     }
   }
 
@@ -47,11 +45,11 @@ class Profile extends Component {
     })
   }
 
-  log = event => {
-    console.log(this.state.person)
-  }
-
   render() {
+    if (!this.state.person) {
+      return <div>Loading...</div>
+    }
+
     return (
       <main className="profile">
         <header>

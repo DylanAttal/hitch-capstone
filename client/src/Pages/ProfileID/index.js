@@ -1,13 +1,8 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 import './style.css'
-
-import katherine from '../../images/katherine-smith.jpg'
-
-import auth from '../../auth'
-import history from '../../history'
 
 class ProfileID extends Component {
   constructor(props) {
@@ -24,7 +19,6 @@ class ProfileID extends Component {
         person: response.data
       })
     })
-    console.log(this.props)
   }
 
   render() {

@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import moment from 'moment'
 
 import './style.css'
-
-import katherine from '../../images/katherine-smith.jpg'
 
 import auth from '../../auth'
 import history from '../../history'
@@ -100,7 +98,7 @@ class MyTrips extends Component {
                       />
                       <div className="card-preview-text">
                         <p>
-                          Driver: {trip.driver_first_name}
+                          Driver: {trip.driver_first_name}{' '}
                           {trip.driver_last_name}
                         </p>
                       </div>

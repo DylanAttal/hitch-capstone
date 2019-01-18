@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import DateTime from 'react-datetime'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 import history from '../../history'

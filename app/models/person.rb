@@ -2,7 +2,7 @@ require 'net/http'
 class Person < ApplicationRecord
   # Where I am a driver
   has_many :trips, dependent: :destroy
-  has_many :rides
+  has_many :rides, dependent: :destroy
   
   # Trips where I am a rider
   has_many :trips_as_rider, through: :rides, class_name: "Trip", source: :trip

@@ -59,6 +59,10 @@
   font-weight: bold;
 }
 
+.landing .log-in {
+  margin-right: 1rem;
+}
+
 .landing .arrow {
   height: 4rem;
   width: 4rem;
@@ -113,6 +117,7 @@
   flex-direction: row;
   justify-content: space-around;
   font-weight: bold;
+  font-size: 0.8rem;
 }
 
 .landing .why-hitch {
@@ -165,7 +170,7 @@
 
 @media only screen and (min-width: 700px) {
   .landing .header-left {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     font-size: 3rem;
   }
 
@@ -174,9 +179,12 @@
   }
 
   .landing .log-in,
-  .sign-up {
-    margin-right: 0.5rem;
+  .landing .sign-up {
     font-size: 2rem;
+  }
+
+  .landing .log-in {
+    margin-right: 1.5rem;
   }
 
   .landing .sub-header {
