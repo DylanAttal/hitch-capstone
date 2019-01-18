@@ -33,7 +33,23 @@ class Profile extends Component {
     })
   }
 
-  _updateProfile = event => {}
+  _updateProfile = event => {
+    event.preventDefault()
+
+    const form = event.target
+
+    const formData = new FormData(form)
+
+    axios.put('/people/current', formData).then(response => {
+      this.setState({
+        person: response.data
+      })
+    })
+  }
+
+  log = event => {
+    console.log(this.state.person)
+  }
 
   render() {
     return (
@@ -81,9 +97,47 @@ class Profile extends Component {
               <div className="email">
                 <p className="email-info">{this.state.person.email}</p>
               </div>
-              <div className="bio">
-                <p className="bio-info">{this.state.person.bio}</p>
+              <div className="age-div">
+                <p>{this.state.person.age}</p>
               </div>
+              <div className="bio-div">
+                <p>{this.state.person.bio}</p>
+              </div>
+              <form onSubmit={this._updateProfile} id="update-profile-form">
+                <label
+                  htmlFor="age"
+                  className={!this.state.person.age ? '' : 'hidden'}
+                >
+                  Age
+                </label>
+                <input
+                  name="person[age]"
+                  type="number"
+                  placeholder="age"
+                  className={!this.state.person.age ? 'age' : 'hidden'}
+                />
+                <label
+                  htmlFor="bio"
+                  className={!this.state.person.bio ? 'age' : 'hidden'}
+                >
+                  Bio
+                </label>
+                <textarea
+                  name="person[bio]"
+                  form="update-profile-form"
+                  placeholder="Enter bio here"
+                  className={!this.state.person.bio ? 'bio' : 'hidden'}
+                />
+                <button
+                  className={
+                    !this.state.person.bio && !this.state.person.age
+                      ? 'bio'
+                      : 'hidden'
+                  }
+                >
+                  Submit
+                </button>
+              </form>
             </div>
           </div>
         </div>

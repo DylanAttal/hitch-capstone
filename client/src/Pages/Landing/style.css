@@ -49,6 +49,11 @@
   font-weight: bold;
 }
 
+.landing .car-icon {
+  height: 1.1rem;
+  filter: invert(1);
+}
+
 .landing .header-right {
   margin-right: 1rem;
   font-weight: bold;
@@ -162,6 +167,10 @@
   .landing .header-left {
     margin-left: 1.5rem;
     font-size: 3rem;
+  }
+
+  .landing .car-icon {
+    height: 2rem;
   }
 
   .landing .log-in,

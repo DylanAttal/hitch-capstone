@@ -5,6 +5,7 @@ import './style.css'
 
 import downArrow from '../../images/Caret_down_font_awesome.svg.png'
 import upArrow from '../../images/Caret_up_font_awesome.svg.png'
+import carIcon from '../../images/car-icon-square.png'
 
 class Landing extends Component {
   _toWhyHitch = event => {
@@ -38,7 +39,12 @@ class Landing extends Component {
           <section className="van">
             <header>
               <div className="header-wrapper">
-                <div className="header-left">HITCH</div>
+                <div className="header-left">
+                  <span>
+                    <img src={carIcon} className="car-icon" />
+                  </span>{' '}
+                  HITCH
+                </div>
                 <div className="header-right">
                   <Link to="/login" className="log-in">
                     LOG IN

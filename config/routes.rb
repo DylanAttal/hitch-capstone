@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   post '/trips/create/', to: 'trips#create' 
   post '/rides/create/', to: 'rides#create'
 
+  put '/people/current', to: 'people#update'
+
   delete '/trips/delete/:id', to: 'trips#delete'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

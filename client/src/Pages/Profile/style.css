@@ -102,11 +102,37 @@
 }
 
 .profile .email {
+  margin-left: 1rem;
   display: flex;
   justify-content: center;
+}
+
+.profile .email p {
+  padding: 0;
 }
 
 .profile .email-info {
   width: 100%;
   padding: 0.5rem;
+}
+
+.profile #update-profile-form {
+  width: 50%;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.profile .age {
+  margin-bottom: 0.5rem;
+}
+
+.profile .hidden {
+  display: none;
+}
+
+.profile .bio-div,
+.profile .age-div {
+  margin-left: 1rem;
 }
