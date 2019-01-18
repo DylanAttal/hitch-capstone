@@ -7,7 +7,7 @@ class RidesController < ApplicationController
   end
 
   def delete
-    ride = current_person.rides.find(params[:id])
+    ride = current_person.rides.find_by(trip_id: params[:id])
 
     ride.destroy
 

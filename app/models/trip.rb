@@ -30,19 +30,6 @@ class Trip < ApplicationRecord
     self.arrival_location_address   ||= Geocoder.search([arrival_location_latitude, arrival_location_longitude]).first.address
   end
 
-    # do |obj, results|
-  #   if geo = results.first
-  #     obj.street  = geo.address.split(',')[0]
-  #     obj.city = geo.city
-  #     obj.state = geo.state
-  #     obj.zip = geo.postal_code
-  #   end
-  # end
-
-  # def address
-  #   self.street + self.city + self.state + self.postal_code
-  # end
-
   def api_json
     {
       id: id,
