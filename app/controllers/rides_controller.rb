@@ -6,6 +6,14 @@ class RidesController < ApplicationController
     render json: @rides
   end
 
+  def delete
+    ride = current_person.rides.find(params[:id])
+
+    ride.destroy
+
+    render json: ride
+  end
+
   def create
     ride = current_person.rides.create(ride_params)
 

@@ -8,10 +8,6 @@ import './style.css'
 
 import history from '../../history'
 import Map from '../../Components/Map'
-import FixedMap from '../../Components/FixedMap'
-
-import katherine from '../../images/katherine-smith.jpg'
-import googlemap from '../../images/google-maps-promo.jpg'
 
 class Search extends Component {
   constructor(props) {
@@ -21,14 +17,6 @@ class Search extends Component {
       trips: []
     }
   }
-
-  // componentDidMount = () => {
-  //   axios.get('/trips/').then(response => {
-  //     this.setState({
-  //       trips: response.data
-  //     })
-  //   })
-  // }
 
   _search = event => {
     event.preventDefault()

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   put '/people/current', to: 'people#update'
 
   delete '/trips/delete/:id', to: 'trips#delete'
+  delete '/rides/delete/:id', to: 'rides#delete'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

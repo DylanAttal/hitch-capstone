@@ -52,6 +52,12 @@ class MyTrips extends Component {
     })
   }
 
+  _cancelRide = (trip_id, event) => {
+    axios.delete(`/rides/delete/${trip_id}`).then(response => {
+      this.loadTrips()
+    })
+  }
+
   render() {
     if (!this.state.person) {
       return <div>Loading...</div>
@@ -153,6 +159,12 @@ class MyTrips extends Component {
                         <p>Seats offered: {trip.number_of_seats_available}</p>
                       </div>
                       <div className="driver-profile-div">
+                        <button
+                          className="cancel-drive"
+                          onClick={this._cancelRide.bind(this, trip.id)}
+                        >
+                          CANCEL RIDE
+                        </button>
                         <Link to={`/people/${trip.driver_name}`}>
                           <button className="driver-profile">
                             DRIVER PROFILE
