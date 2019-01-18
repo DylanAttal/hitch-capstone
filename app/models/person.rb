@@ -1,13 +1,11 @@
-require 'net/http'
 class Person < ApplicationRecord
+  has_many :rides, dependent: :destroy
+
   # Where I am a driver
   has_many :trips, dependent: :destroy
-  has_many :rides, dependent: :destroy
   
   # Trips where I am a rider
   has_many :trips_as_rider, through: :rides, class_name: "Trip", source: :trip
-  
-  # current_person.rides.create(trip_id: )
   
   def self.from_auth_hash(payload)
     Person.find_or_create_by(auth_sub: payload["sub"]) do |person|

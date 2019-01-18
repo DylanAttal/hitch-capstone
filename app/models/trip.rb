@@ -4,6 +4,8 @@ class Trip < ApplicationRecord
   # Who is driving on this trip
   belongs_to :person
 
+  has_many :rides, dependent: :destroy
+  
   # Who is riding on this trip
   has_many :riders, through: :rides, class_name: "Person", source: :trip
 
