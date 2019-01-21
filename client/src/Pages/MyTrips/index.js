@@ -88,48 +88,8 @@ class MyTrips extends Component {
             <div className="container-info">
               <div className="drives">
                 <h2 className="title">My Drives</h2>
-                {this.state.person.drives.map((trip, index) => (
-                  <div className="card-preview" key={index}>
-                    <div className="card-preview-header">
-                      <img
-                        src={trip.driver_avatar_url}
-                        alt="pic"
-                        className="thumbnail"
-                      />
-                      <div className="card-preview-text">
-                        <p>
-                          Driver: {trip.driver_first_name}{' '}
-                          {trip.driver_last_name}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="card-preview-secondary-text">
-                      <p>
-                        Departing from {trip.departure_location_address} at{' '}
-                        {moment(trip.depart_at).format('LT')} on{' '}
-                        {moment(trip.depart_at).format('MMMM Do YYYY')} and
-                        arriving {trip.arrival_location_address} at{' '}
-                        {moment(trip.arrive_at).format('LT')} on{' '}
-                        {moment(trip.arrive_at).format('MMMM Do YYYY')}.
-                      </p>
-                      <p>Price per seat: ${trip.price_per_seat}</p>
-                      <p>Seats offered: {trip.number_of_seats_available}</p>
-                    </div>
-                    <div className="driver-profile-div">
-                      <button
-                        className="cancel-drive"
-                        onClick={this._deleteDrive.bind(this, trip.id)}
-                      >
-                        DELETE DRIVE
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="rides">
-                <h2 className="title">My Rides</h2>
-                {this.state.person.rides.map((trip, index) => {
-                  return (
+                <div className="drives-cards">
+                  {this.state.person.drives.map((trip, index) => (
                     <div className="card-preview" key={index}>
                       <div className="card-preview-header">
                         <img
@@ -138,7 +98,7 @@ class MyTrips extends Component {
                           className="thumbnail"
                         />
                         <div className="card-preview-text">
-                          <p>
+                          <p className="driver-name">
                             Driver: {trip.driver_first_name}{' '}
                             {trip.driver_last_name}
                           </p>
@@ -159,19 +119,63 @@ class MyTrips extends Component {
                       <div className="driver-profile-div">
                         <button
                           className="cancel-drive"
-                          onClick={this._cancelRide.bind(this, trip.id)}
+                          onClick={this._deleteDrive.bind(this, trip.id)}
                         >
-                          CANCEL RIDE
+                          DELETE DRIVE
                         </button>
-                        <Link to={`/people/${trip.driver_name}`}>
-                          <button className="driver-profile">
-                            DRIVER PROFILE
-                          </button>
-                        </Link>
                       </div>
                     </div>
-                  )
-                })}
+                  ))}
+                </div>
+              </div>
+              <div className="rides">
+                <h2 className="title">My Rides</h2>
+                <div className="rides-cards">
+                  {this.state.person.rides.map((trip, index) => {
+                    return (
+                      <div className="card-preview" key={index}>
+                        <div className="card-preview-header">
+                          <img
+                            src={trip.driver_avatar_url}
+                            alt="pic"
+                            className="thumbnail"
+                          />
+                          <div className="card-preview-text">
+                            <p className="driver-name">
+                              Driver: {trip.driver_first_name}{' '}
+                              {trip.driver_last_name}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="card-preview-secondary-text">
+                          <p>
+                            Departing from {trip.departure_location_address} at{' '}
+                            {moment(trip.depart_at).format('LT')} on{' '}
+                            {moment(trip.depart_at).format('MMMM Do YYYY')} and
+                            arriving {trip.arrival_location_address} at{' '}
+                            {moment(trip.arrive_at).format('LT')} on{' '}
+                            {moment(trip.arrive_at).format('MMMM Do YYYY')}.
+                          </p>
+                          <p>Price per seat: ${trip.price_per_seat}</p>
+                          <p>Seats offered: {trip.number_of_seats_available}</p>
+                        </div>
+                        <div className="driver-profile-div">
+                          <button
+                            className="cancel-drive"
+                            onClick={this._cancelRide.bind(this, trip.id)}
+                          >
+                            CANCEL RIDE
+                          </button>
+                          <Link to={`/people/${trip.driver_name}`}>
+                            <button className="driver-profile">
+                              DRIVER PROFILE
+                            </button>
+                          </Link>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
               </div>
             </div>
           </div>

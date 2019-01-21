@@ -164,7 +164,7 @@ class OfferDrive extends Component {
                   <input type="number" name="trip[price_per_seat]" />
                 </div>
                 <div className="create-drive-div">
-                  <button className="create-drive">Offer Drive</button>
+                  <button className="create-drive">OFFER DRIVE</button>
                 </div>
               </form>
             </div>

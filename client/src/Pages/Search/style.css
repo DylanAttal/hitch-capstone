@@ -141,7 +141,7 @@ html {
 }
 
 .search .create-drive-div {
-  border-bottom: 50px solid #e0e0e0;
+  /* border-bottom: 50px solid #e0e0e0; */
 }
 
 .search .card-preview {
@@ -313,7 +313,20 @@ html {
   }
 
   .search .search-button {
+    height: 40px;
+    width: 150px;
+    margin-right: 10px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.3rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
     margin-top: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    outline: none;
   }
 
   .search .results {
@@ -325,15 +338,73 @@ html {
   }
 
   .search .card-preview {
-    width: 450px;
+    width: 440px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0.5rem;
+    padding: 0.7rem;
     border: 1.2px solid black;
     border-radius: 4px;
     margin: 5px;
     background-color: #fff;
+  }
+
+  .search .thumbnail {
+    height: 6rem;
+    width: auto;
+    border-radius: 500px;
+  }
+
+  .search .driver-name {
+    font-size: 1.4rem;
+  }
+
+  .search .card-preview-header {
+    border-bottom: 1px solid black;
+  }
+
+  .search .card-preview-secondary-text {
+    font-size: 1.1rem;
+  }
+
+  .search .driver-profile-div {
+    margin-bottom: 0.5rem;
+  }
+
+  .search .book-ride {
+    height: 35px;
+    width: 130px;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .search .driver-profile {
+    height: 35px;
+    width: 130px;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
   }
 
   .search .search-ride-form {
