@@ -64,11 +64,14 @@ class ProfileID extends Component {
                   </span>
                 </h2>
               </div>
-              <div className="bio">
-                <p className="bio-info">{this.state.person.bio}</p>
-              </div>
               <div className="email">
                 <p className="email-info">{this.state.person.email}</p>
+              </div>
+              <div className="age">
+                <p className="age-info">{this.state.person.age} years old</p>
+              </div>
+              <div className="bio">
+                <p className="bio-info">{this.state.person.bio}</p>
               </div>
             </div>
           </div>

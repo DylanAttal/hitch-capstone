@@ -96,10 +96,10 @@ class Profile extends Component {
                 <p className="email-info">{this.state.person.email}</p>
               </div>
               <div className="age-div">
-                <p>{this.state.person.age} years old</p>
+                <p className="age-info">{this.state.person.age} years old</p>
               </div>
               <div className="bio-div">
-                <p>{this.state.person.bio}</p>
+                <p className="bio-info">{this.state.person.bio}</p>
               </div>
               <form onSubmit={this._updateProfile} id="update-profile-form">
                 <label
