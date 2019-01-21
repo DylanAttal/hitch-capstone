@@ -96,7 +96,7 @@ class Profile extends Component {
                 <p className="email-info">{this.state.person.email}</p>
               </div>
               <div className="age-div">
-                <p>{this.state.person.age}</p>
+                <p>{this.state.person.age} years old</p>
               </div>
               <div className="bio-div">
                 <p>{this.state.person.bio}</p>

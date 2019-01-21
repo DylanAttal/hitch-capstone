@@ -136,3 +136,53 @@
 .profile .age-div {
   margin-left: 1rem;
 }
+
+@media only screen and (min-width: 700px) {
+  .profile .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .profile .profile-picture {
+    height: calc(100vh - 4rem);
+    width: auto;
+  }
+
+  .profile .container-info {
+    width: 500px;
+  }
+
+  .profile .name {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #fff;
+  }
+
+  .profile .name h2 {
+    width: 100%;
+    margin: 0;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding: 0;
+    text-align: left;
+    font-size: 2rem;
+    color: #000;
+  }
+
+  .profile .email-info {
+    margin-bottom: 0.5rem;
+  }
+
+  .profile .age-div p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .profile .bio-div p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+}
