@@ -106,15 +106,34 @@ class MyTrips extends Component {
                       </div>
                       <div className="card-preview-secondary-text">
                         <p>
-                          Departing from {trip.departure_location_address} at{' '}
-                          {moment(trip.depart_at).format('LT')} on{' '}
-                          {moment(trip.depart_at).format('MMMM Do YYYY')} and
-                          arriving {trip.arrival_location_address} at{' '}
-                          {moment(trip.arrive_at).format('LT')} on{' '}
+                          <strong>Departing from </strong>
+                          {trip.departure_location_address}.
+                          <br />
+                          <strong>Arriving at </strong>
+                          {trip.arrival_location_address}.
+                          <br />
+                          <br />
+                          <strong>Departure date:</strong>{' '}
+                          {moment(trip.depart_at).format('MMMM Do YYYY')}.
+                          <br />
+                          <strong>Arrival date:</strong>{' '}
                           {moment(trip.arrive_at).format('MMMM Do YYYY')}.
+                          <br />
+                          <br />
+                          <strong>Departure time:</strong>{' '}
+                          {moment(trip.depart_at).format('LT')}.
+                          <br />
+                          <strong>Arrival time: </strong>
+                          {moment(trip.arrive_at).format('LT')}.
                         </p>
-                        <p>Price per seat: ${trip.price_per_seat}</p>
-                        <p>Seats offered: {trip.number_of_seats_available}</p>
+                        <p>
+                          <strong>Price per seat:</strong> $
+                          {trip.price_per_seat}
+                        </p>
+                        <p>
+                          <strong>Seats available:</strong>{' '}
+                          {trip.number_of_seats_available}
+                        </p>
                       </div>
                       <div className="driver-profile-div">
                         <button
@@ -149,15 +168,34 @@ class MyTrips extends Component {
                         </div>
                         <div className="card-preview-secondary-text">
                           <p>
-                            Departing from {trip.departure_location_address} at{' '}
-                            {moment(trip.depart_at).format('LT')} on{' '}
-                            {moment(trip.depart_at).format('MMMM Do YYYY')} and
-                            arriving {trip.arrival_location_address} at{' '}
-                            {moment(trip.arrive_at).format('LT')} on{' '}
+                            <strong>Departing from </strong>
+                            {trip.departure_location_address}.
+                            <br />
+                            <strong>Arriving at </strong>
+                            {trip.arrival_location_address}.
+                            <br />
+                            <br />
+                            <strong>Departure date:</strong>{' '}
+                            {moment(trip.depart_at).format('MMMM Do YYYY')}.
+                            <br />
+                            <strong>Arrival date:</strong>{' '}
                             {moment(trip.arrive_at).format('MMMM Do YYYY')}.
+                            <br />
+                            <br />
+                            <strong>Departure time:</strong>{' '}
+                            {moment(trip.depart_at).format('LT')}.
+                            <br />
+                            <strong>Arrival time: </strong>
+                            {moment(trip.arrive_at).format('LT')}.
                           </p>
-                          <p>Price per seat: ${trip.price_per_seat}</p>
-                          <p>Seats offered: {trip.number_of_seats_available}</p>
+                          <p>
+                            <strong>Price per seat:</strong> $
+                            {trip.price_per_seat}
+                          </p>
+                          <p>
+                            <strong>Seats available:</strong>{' '}
+                            {trip.number_of_seats_available}
+                          </p>
                         </div>
                         <div className="driver-profile-div">
                           <button

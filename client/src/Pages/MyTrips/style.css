@@ -273,12 +273,12 @@
 
   .my-trips .container-info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .my-trips .drives,
   .my-trips .rides {
-    width: 50vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -293,33 +293,72 @@
   }
 
   .my-trips .card-preview {
-    min-height: 370px;
-    width: 330px;
+    width: 440px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0.5rem;
+    padding: 0.7rem;
     border: 1.2px solid black;
     border-radius: 4px;
     margin: 5px;
     background-color: #fff;
   }
 
-  .my-trips .card-preview-header {
-    line-height: 1rem;
-  }
-
   .my-trips .thumbnail {
-    height: 5.5rem;
+    height: 6rem;
     width: auto;
-    border-radius: 50px;
+    border-radius: 500px;
   }
 
   .my-trips .driver-name {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
-  .my-trips .card-preview-secondary-text p {
+  .my-trips .card-preview-header {
+    border-bottom: 1px solid black;
+  }
+
+  .my-trips .card-preview-secondary-text {
     font-size: 1.1rem;
+  }
+
+  .my-trips .driver-profile-div {
+    margin-bottom: 0.5rem;
+  }
+
+  .my-trips .book-ride {
+    height: 35px;
+    width: 130px;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .my-trips .driver-profile {
+    height: 35px;
+    width: 130px;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
   }
 }
