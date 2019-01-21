@@ -235,3 +235,350 @@ html {
 .search .driver-profile:hover {
   opacity: 0.85;
 }
+
+@media only screen and (min-width: 700px) {
+  .search .wrapper {
+    width: 100%;
+    min-height: 100%;
+  }
+
+  .search .locations {
+    font-size: 1.5rem;
+  }
+
+  .search-map {
+    height: 100%;
+    width: 100%;
+  }
+
+  .search .map-div {
+    height: 75vh;
+    width: 50%;
+  }
+
+  .search .maps {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5rem;
+  }
+
+  .search .datetimes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .search .departure-date-time,
+  .search .arrival-date-time {
+    height: 25vh;
+    width: 50%;
+  }
+
+  .search .departure-date-time p,
+  .search .arrival-date-time p {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+
+  .search .departure-date-time,
+  .search .arrival-date-time {
+    margin: 0;
+    margin-left: 1rem;
+  }
+
+  .search .seats label,
+  .search .price label {
+    font-size: 1.5rem;
+  }
+
+  .search .seats,
+  .search .price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .search .seats select {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+
+  .search .price input {
+    font-size: 1rem;
+  }
+
+  .search .search-button {
+    margin-top: 2rem;
+  }
+
+  .search .results {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #e0e0e0;
+  }
+
+  .search .card-preview {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border: 1.2px solid black;
+    border-radius: 4px;
+    margin: 5px;
+    background-color: #fff;
+  }
+
+  .search .search-ride-form {
+    border-bottom: none;
+  }
+
+  /* Below styling is from react datetime library.
+ * I modified it to my needs.
+ * https://github.com/YouCanBookMe/react-datetime
+ */
+
+  .search .rdt {
+    position: relative;
+  }
+
+  .search .rdtPicker {
+    display: none;
+    position: absolute;
+    width: 650px;
+    padding: 5px;
+    margin-top: 1px;
+    z-index: 99999 !important;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f9f9f9;
+  }
+
+  .search .rdt input {
+    font-size: 1rem;
+  }
+
+  .search .rdtOpen .rdtPicker {
+    display: block;
+  }
+
+  .search .rdtStatic .rdtPicker {
+    box-shadow: none;
+    position: static;
+  }
+
+  .search .rdtPicker .rdtTimeToggle {
+    text-align: center;
+  }
+
+  .search .rdtPicker table {
+    width: 100%;
+    margin: 0;
+  }
+
+  .search .rdtPicker td,
+  .search .rdtPicker th {
+    text-align: center;
+    height: 28px;
+  }
+
+  .rdtPicker td {
+    cursor: pointer;
+  }
+
+  .search .rdtPicker td.rdtDay:hover,
+  .search .rdtPicker td.rdtHour:hover,
+  .search .rdtPicker td.rdtMinute:hover,
+  .search .rdtPicker td.rdtSecond:hover,
+  .search .rdtPicker .rdtTimeToggle:hover {
+    background: #eeeeee;
+    cursor: pointer;
+  }
+
+  .search .rdtPicker td.rdtOld,
+  .search .rdtPicker td.rdtNew {
+    color: #999999;
+  }
+
+  .search .rdtPicker td.rdtToday {
+    position: relative;
+  }
+
+  .search .rdtPicker td.rdtToday:before {
+    content: '';
+    display: inline-block;
+    border-left: 7px solid transparent;
+    border-bottom: 7px solid #428bca;
+    border-top-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+  }
+
+  .search .rdtPicker td.rdtActive,
+  .search .rdtPicker td.rdtActive:hover {
+    background-color: #428bca;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .search .rdtPicker td.rdtActive.rdtToday:before {
+    border-bottom-color: #fff;
+  }
+
+  .search .rdtPicker td.rdtDisabled,
+  .search .rdtPicker td.rdtDisabled:hover {
+    background: none;
+    color: #999999;
+    cursor: not-allowed;
+  }
+
+  .search .rdtPicker td span.rdtOld {
+    color: #999999;
+  }
+
+  .search .rdtPicker td span.rdtDisabled,
+  .search .rdtPicker td span.rdtDisabled:hover {
+    background: none;
+    color: #999999;
+    cursor: not-allowed;
+  }
+
+  .search .rdtPicker th {
+    border-bottom: 1px solid #f9f9f9;
+  }
+
+  .search .rdtPicker .dow {
+    width: 14.2857%;
+    border-bottom: none;
+    cursor: default;
+  }
+
+  .search .rdtPicker th.rdtSwitch {
+    width: 100px;
+  }
+
+  .search .rdtPicker th.rdtNext,
+  .search .rdtPicker th.rdtPrev {
+    font-size: 21px;
+    vertical-align: top;
+  }
+
+  .search .rdtPrev span,
+  .search .rdtNext span {
+    display: block;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+  }
+
+  .search .rdtPicker th.rdtDisabled,
+  .search .rdtPicker th.rdtDisabled:hover {
+    background: none;
+    color: #999999;
+    cursor: not-allowed;
+  }
+
+  .search .rdtPicker thead tr:first-child th {
+    cursor: pointer;
+  }
+
+  .search .rdtPicker thead tr:first-child th:hover {
+    background: #eeeeee;
+  }
+
+  .search .rdtPicker tfoot {
+    border-top: 1px solid #f9f9f9;
+  }
+
+  .search .rdtPicker button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .search .rdtPicker button:hover {
+    background-color: #eee;
+  }
+
+  .search .rdtPicker thead button {
+    width: 100%;
+    height: 100%;
+  }
+
+  .search td.rdtMonth,
+  .search td.rdtYear {
+    height: 50px;
+    width: 25%;
+    cursor: pointer;
+  }
+
+  .search td.rdtMonth:hover,
+  .search td.rdtYear:hover {
+    background: #eee;
+  }
+
+  .search .rdtCounters {
+    display: inline-block;
+  }
+
+  .search .rdtCounters > div {
+    float: left;
+  }
+
+  .search .rdtCounter {
+    height: 100px;
+  }
+
+  .search .rdtCounter {
+    width: 40px;
+  }
+
+  .search .rdtCounterSeparator {
+    line-height: 100px;
+  }
+
+  .search .rdtCounter .rdtBtn {
+    height: 40%;
+    line-height: 40px;
+    cursor: pointer;
+    display: block;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+  }
+
+  .search .rdtCounter .rdtBtn:hover {
+    background: #eee;
+  }
+
+  .search .rdtCounter .rdtCount {
+    height: 20%;
+    font-size: 1.2em;
+  }
+
+  .search .rdtMilli {
+    vertical-align: middle;
+    padding-left: 8px;
+    width: 48px;
+  }
+
+  .search .rdtMilli input {
+    width: 100%;
+    font-size: 1.2em;
+    margin-top: 37px;
+  }
+
+  .search .rdtTime td {
+    cursor: default;
+  }
+}

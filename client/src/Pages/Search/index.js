@@ -88,130 +88,147 @@ class Search extends Component {
         <div className="wrapper">
           <div className="container">
             <div className="container-info">
-              <form
-                onSubmit={this._search}
-                autoComplete="off"
-                className="search-ride-form"
-              >
-                <input
-                  type="hidden"
-                  value={this.state.departure_location_longitude}
-                  name="trip[departure_location_longitude]"
-                />
-                <input
-                  type="hidden"
-                  value={this.state.departure_location_latitude}
-                  name="trip[departure_location_latitude]"
-                />
-                <input
-                  type="hidden"
-                  value={this.state.arrival_location_longitude}
-                  name="trip[arrival_location_longitude]"
-                />
-                <input
-                  type="hidden"
-                  value={this.state.arrival_location_latitude}
-                  name="trip[arrival_location_latitude]"
-                />
-                <div>
-                  <p className="locations">Departure Location:</p>
-                  <Map
-                    className="search-map"
-                    onClick={this._clickDepartureMap}
+              <section className="searching">
+                <form
+                  onSubmit={this._search}
+                  autoComplete="off"
+                  className="search-ride-form"
+                >
+                  <input
+                    type="hidden"
+                    value={this.state.departure_location_longitude}
+                    name="trip[departure_location_longitude]"
                   />
-                </div>
-                <div>
-                  <p className="locations">Arrival Location:</p>
-                  <Map className="search-map" onClick={this._clickArrivalMap} />
-                </div>
-                <div className="departure-date-time">
-                  <p>Departure Date and Time</p>
-                  <DateTime
-                    dateFormat="YYYY-MM-DD"
-                    inputProps={{ name: 'trip[depart_at]' }}
+                  <input
+                    type="hidden"
+                    value={this.state.departure_location_latitude}
+                    name="trip[departure_location_latitude]"
                   />
-                </div>
-                <div className="arrival-date-time">
-                  <p>Arrival Date and Time</p>
-                  <DateTime
-                    dateFormat="YYYY-MM-DD"
-                    inputProps={{ name: 'trip[arrive_at]' }}
+                  <input
+                    type="hidden"
+                    value={this.state.arrival_location_longitude}
+                    name="trip[arrival_location_longitude]"
                   />
-                </div>
-                <div className="seats">
-                  <label htmlFor="number_of_seats_available">
-                    Number of seats available
-                  </label>
-                  <select name="trip[number_of_seats_available]">
-                    <option />
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                  </select>
-                </div>
-                <div className="price">
-                  <label htmlFor="price_per_seat">Price per seat $</label>
-                  <input type="number" name="trip[price_per_seat]" />
-                </div>
-                <div className="create-drive-div">
-                  <button className="search-button">Search</button>
-                </div>
-              </form>
-              {this.state.trips.map((trip, index) => {
-                return (
-                  <div className="card-preview" key={index}>
-                    <div className="card-preview-header">
-                      <img
-                        src={trip.driver_avatar_url}
-                        alt="pic"
-                        className="thumbnail"
+                  <input
+                    type="hidden"
+                    value={this.state.arrival_location_latitude}
+                    name="trip[arrival_location_latitude]"
+                  />
+                  <section className="maps">
+                    <div className="map-div">
+                      <p className="locations">Departure Location:</p>
+                      <Map
+                        className="search-map"
+                        onClick={this._clickDepartureMap}
                       />
-                      <div className="card-preview-text">
+                    </div>
+                    <div className="map-div">
+                      <p className="locations">Arrival Location:</p>
+                      <Map
+                        className="search-map"
+                        onClick={this._clickArrivalMap}
+                      />
+                    </div>
+                  </section>
+                  <section className="datetimes">
+                    <div className="departure-date-time">
+                      <p>Departure Date and Time</p>
+                      <DateTime
+                        dateFormat="YYYY-MM-DD"
+                        inputProps={{
+                          name: 'trip[depart_at]',
+                          className: 'datetime'
+                        }}
+                      />
+                    </div>
+                    <div className="arrival-date-time">
+                      <p>Arrival Date and Time</p>
+                      <DateTime
+                        dateFormat="YYYY-MM-DD"
+                        inputProps={{
+                          name: 'trip[arrive_at]',
+                          className: 'datetime'
+                        }}
+                      />
+                    </div>
+                  </section>
+                  <div className="seats">
+                    <label htmlFor="number_of_seats_available">
+                      Number of seats available
+                    </label>
+                    <select name="trip[number_of_seats_available]">
+                      <option />
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                    </select>
+                  </div>
+                  <div className="price">
+                    <label htmlFor="price_per_seat">Price per seat $</label>
+                    <input type="number" name="trip[price_per_seat]" />
+                  </div>
+                  <div className="create-drive-div">
+                    <button className="search-button">Search</button>
+                  </div>
+                </form>
+              </section>
+              <section className="results">
+                {this.state.trips.map((trip, index) => {
+                  return (
+                    <div className="card-preview" key={index}>
+                      <div className="card-preview-header">
+                        <img
+                          src={trip.driver_avatar_url}
+                          alt="pic"
+                          className="thumbnail"
+                        />
+                        <div className="card-preview-text">
+                          <p>
+                            Driver: {trip.driver_first_name}{' '}
+                            {trip.driver_last_name}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="card-preview-secondary-text">
                         <p>
-                          Driver: {trip.driver_first_name}{' '}
-                          {trip.driver_last_name}
+                          Departing from {trip.departure_location_address} at{' '}
+                          {moment(trip.depart_at).format('LT')} on{' '}
+                          {moment(trip.depart_at).format('MMMM Do YYYY')} and
+                          arriving at {trip.arrival_location_address} at{' '}
+                          {moment(trip.arrive_at).format('LT')} on{' '}
+                          {moment(trip.arrive_at).format('MMMM Do YYYY')}.
                         </p>
+                        <p>Price per seat: ${trip.price_per_seat}</p>
+                        <p>Seats available: {trip.number_of_seats_available}</p>
+                      </div>
+                      <div className="driver-profile-div">
+                        <form onSubmit={this._bookRide}>
+                          <Link to={`/people/${trip.driver_name}`}>
+                            <button className="driver-profile">
+                              DRIVER PROFILE
+                            </button>
+                          </Link>
+
+                          <input
+                            type="hidden"
+                            name="ride[trip_id]"
+                            value={trip.id}
+                          />
+
+                          <button type="submit" className="book-ride">
+                            BOOK RIDE
+                          </button>
+                        </form>
                       </div>
                     </div>
-                    <div className="card-preview-secondary-text">
-                      <p>
-                        Departing from {trip.departure_location_address} at{' '}
-                        {moment(trip.depart_at).format('LT')} on{' '}
-                        {moment(trip.depart_at).format('MMMM Do YYYY')} and
-                        arriving at {trip.arrival_location_address} at{' '}
-                        {moment(trip.arrive_at).format('LT')} on{' '}
-                        {moment(trip.arrive_at).format('MMMM Do YYYY')}.
-                      </p>
-                      <p>Price per seat: ${trip.price_per_seat}</p>
-                      <p>Seats available: {trip.number_of_seats_available}</p>
-                    </div>
-                    <div className="driver-profile-div">
-                      <form onSubmit={this._bookRide}>
-                        <Link to={`/people/${trip.driver_name}`}>
-                          <button className="driver-profile">
-                            DRIVER PROFILE
-                          </button>
-                        </Link>
-
-                        <input
-                          type="hidden"
-                          name="ride[trip_id]"
-                          value={trip.id}
-                        />
-
-                        <button type="submit" className="book-ride">
-                          BOOK RIDE
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                )
-              })}
+                  )
+                })}
+              </section>
             </div>
           </div>
         </div>
