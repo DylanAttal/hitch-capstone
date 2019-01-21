@@ -112,34 +112,38 @@ class OfferDrive extends Component {
                   value={this.state.arrival_location_latitude}
                   name="trip[arrival_location_latitude]"
                 />
-                <div>
-                  <p className="locations">Departure Location</p>
-                  <Map
-                    className="offer-drive-map"
-                    onClick={this._clickDepartureMap}
-                  />
-                </div>
-                <div>
-                  <p className="locations">Arrival Location</p>
-                  <Map
-                    className="offer-drive-map"
-                    onClick={this._clickArrivalMap}
-                  />
-                </div>
-                <div className="departure-date-time">
-                  <p>Departure Date and Time</p>
-                  <DateTime
-                    dateFormat="YYYY-MM-DD"
-                    inputProps={{ name: 'trip[depart_at]' }}
-                  />
-                </div>
-                <div className="arrival-date-time">
-                  <p>Arrival Date and Time</p>
-                  <DateTime
-                    dateFormat="YYYY-MM-DD"
-                    inputProps={{ name: 'trip[arrive_at]' }}
-                  />
-                </div>
+                <section className="maps">
+                  <div className="map-div-1">
+                    <p className="locations">Departure Location</p>
+                    <Map
+                      className="offer-drive-map"
+                      onClick={this._clickDepartureMap}
+                    />
+                  </div>
+                  <div className="map-div-2">
+                    <p className="locations">Arrival Location</p>
+                    <Map
+                      className="offer-drive-map"
+                      onClick={this._clickArrivalMap}
+                    />
+                  </div>
+                </section>
+                <section className="datetimes">
+                  <div className="departure-date-time">
+                    <p>Departure Date and Time</p>
+                    <DateTime
+                      dateFormat="YYYY-MM-DD"
+                      inputProps={{ name: 'trip[depart_at]' }}
+                    />
+                  </div>
+                  <div className="arrival-date-time">
+                    <p>Arrival Date and Time</p>
+                    <DateTime
+                      dateFormat="YYYY-MM-DD"
+                      inputProps={{ name: 'trip[arrive_at]' }}
+                    />
+                  </div>
+                </section>
                 <div className="seats">
                   <label htmlFor="number_of_seats_available">
                     Number of seats available

@@ -115,15 +115,15 @@ class Search extends Component {
                     name="trip[arrival_location_latitude]"
                   />
                   <section className="maps">
-                    <div className="map-div">
-                      <p className="locations">Departure Location:</p>
+                    <div className="map-div-1">
+                      <p className="locations">Departure Location</p>
                       <Map
                         className="search-map"
                         onClick={this._clickDepartureMap}
                       />
                     </div>
-                    <div className="map-div">
-                      <p className="locations">Arrival Location:</p>
+                    <div className="map-div-2">
+                      <p className="locations">Arrival Location</p>
                       <Map
                         className="search-map"
                         onClick={this._clickArrivalMap}

@@ -251,9 +251,14 @@ html {
     width: 100%;
   }
 
-  .search .map-div {
-    height: 75vh;
+  .search .map-div-1,
+  .search .map-div-2 {
+    height: 70vh;
     width: 50%;
+  }
+
+  .search .map-div-1 {
+    margin-right: 0.5rem;
   }
 
   .search .maps {

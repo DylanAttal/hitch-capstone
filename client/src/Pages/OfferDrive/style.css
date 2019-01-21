@@ -345,3 +345,369 @@ td.rdtYear:hover {
 .rdtTime td {
   cursor: default;
 }
+
+@media only screen and (min-width: 700px) {
+  .offer-drive .wrapper {
+    width: 100%;
+    min-height: 100%;
+  }
+
+  .offer-drive .locations {
+    font-size: 1.5rem;
+  }
+
+  .offer-drive-map {
+    height: 100%;
+    width: 100%;
+  }
+
+  .offer-drive .map-div-1,
+  .offer-drive .map-div-2 {
+    height: 70vh;
+    width: 50%;
+  }
+
+  .offer-drive .map-div-1 {
+    margin-right: 0.5rem;
+  }
+
+  .offer-drive .maps {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5rem;
+  }
+
+  .offer-drive .datetimes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .offer-drive .departure-date-time,
+  .offer-drive .arrival-date-time {
+    height: 25vh;
+    width: 50%;
+  }
+
+  .offer-drive .departure-date-time p,
+  .offer-drive .arrival-date-time p {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+
+  .offer-drive .departure-date-time,
+  .offer-drive .arrival-date-time {
+    margin: 0;
+    margin-left: 1rem;
+  }
+
+  .offer-drive .seats label,
+  .offer-drive .price label {
+    font-size: 1.5rem;
+  }
+
+  .offer-drive .seats,
+  .offer-drive .price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .offer-drive .seats select {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+
+  .offer-drive .price input {
+    font-size: 1rem;
+  }
+
+  .offer-drive .create-drive {
+    height: 40px;
+    width: 150px;
+    margin-right: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    outline: none;
+  }
+
+  .offer-drive .results {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #e0e0e0;
+  }
+
+  .offer-drive .card-preview {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border: 1.2px solid black;
+    border-radius: 4px;
+    margin: 5px;
+    background-color: #fff;
+  }
+
+  .offer-drive .search-ride-form {
+    border-bottom: none;
+  }
+
+  /* Below styling is from react datetime library.
+ * I modified it to my needs.
+ * https://github.com/YouCanBookMe/react-datetime
+ */
+
+  .offer-drive .rdt {
+    position: relative;
+  }
+
+  .offer-drive .rdtPicker {
+    display: none;
+    position: absolute;
+    width: 650px;
+    padding: 5px;
+    margin-top: 1px;
+    z-index: 99999 !important;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f9f9f9;
+  }
+
+  .offer-drive .rdt input {
+    font-size: 1rem;
+  }
+
+  .offer-drive .rdtOpen .rdtPicker {
+    display: block;
+  }
+
+  .offer-drive .rdtStatic .rdtPicker {
+    box-shadow: none;
+    position: static;
+  }
+
+  .offer-drive .rdtPicker .rdtTimeToggle {
+    text-align: center;
+  }
+
+  .offer-drive .rdtPicker table {
+    width: 100%;
+    margin: 0;
+  }
+
+  .offer-drive .rdtPicker td,
+  .offer-drive .rdtPicker th {
+    text-align: center;
+    height: 28px;
+  }
+
+  .rdtPicker td {
+    cursor: pointer;
+  }
+
+  .offer-drive .rdtPicker td.rdtDay:hover,
+  .offer-drive .rdtPicker td.rdtHour:hover,
+  .offer-drive .rdtPicker td.rdtMinute:hover,
+  .offer-drive .rdtPicker td.rdtSecond:hover,
+  .offer-drive .rdtPicker .rdtTimeToggle:hover {
+    background: #eeeeee;
+    cursor: pointer;
+  }
+
+  .offer-drive .rdtPicker td.rdtOld,
+  .offer-drive .rdtPicker td.rdtNew {
+    color: #999999;
+  }
+
+  .offer-drive .rdtPicker td.rdtToday {
+    position: relative;
+  }
+
+  .offer-drive .rdtPicker td.rdtToday:before {
+    content: '';
+    display: inline-block;
+    border-left: 7px solid transparent;
+    border-bottom: 7px solid #428bca;
+    border-top-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+  }
+
+  .offer-drive .rdtPicker td.rdtActive,
+  .offer-drive .rdtPicker td.rdtActive:hover {
+    background-color: #428bca;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .offer-drive .rdtPicker td.rdtActive.rdtToday:before {
+    border-bottom-color: #fff;
+  }
+
+  .offer-drive .rdtPicker td.rdtDisabled,
+  .offer-drive .rdtPicker td.rdtDisabled:hover {
+    background: none;
+    color: #999999;
+    cursor: not-allowed;
+  }
+
+  .offer-drive .rdtPicker td span.rdtOld {
+    color: #999999;
+  }
+
+  .offer-drive .rdtPicker td span.rdtDisabled,
+  .offer-drive .rdtPicker td span.rdtDisabled:hover {
+    background: none;
+    color: #999999;
+    cursor: not-allowed;
+  }
+
+  .offer-drive .rdtPicker th {
+    border-bottom: 1px solid #f9f9f9;
+  }
+
+  .offer-drive .rdtPicker .dow {
+    width: 14.2857%;
+    border-bottom: none;
+    cursor: default;
+  }
+
+  .offer-drive .rdtPicker th.rdtSwitch {
+    width: 100px;
+  }
+
+  .offer-drive .rdtPicker th.rdtNext,
+  .offer-drive .rdtPicker th.rdtPrev {
+    font-size: 21px;
+    vertical-align: top;
+  }
+
+  .offer-drive .rdtPrev span,
+  .offer-drive .rdtNext span {
+    display: block;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+  }
+
+  .offer-drive .rdtPicker th.rdtDisabled,
+  .offer-drive .rdtPicker th.rdtDisabled:hover {
+    background: none;
+    color: #999999;
+    cursor: not-allowed;
+  }
+
+  .offer-drive .rdtPicker thead tr:first-child th {
+    cursor: pointer;
+  }
+
+  .offer-drive .rdtPicker thead tr:first-child th:hover {
+    background: #eeeeee;
+  }
+
+  .offer-drive .rdtPicker tfoot {
+    border-top: 1px solid #f9f9f9;
+  }
+
+  .offer-drive .rdtPicker button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .offer-drive .rdtPicker button:hover {
+    background-color: #eee;
+  }
+
+  .offer-drive .rdtPicker thead button {
+    width: 100%;
+    height: 100%;
+  }
+
+  .offer-drive td.rdtMonth,
+  .offer-drive td.rdtYear {
+    height: 50px;
+    width: 25%;
+    cursor: pointer;
+  }
+
+  .offer-drive td.rdtMonth:hover,
+  .offer-drive td.rdtYear:hover {
+    background: #eee;
+  }
+
+  .offer-drive .rdtCounters {
+    display: inline-block;
+  }
+
+  .offer-drive .rdtCounters > div {
+    float: left;
+  }
+
+  .offer-drive .rdtCounter {
+    height: 100px;
+  }
+
+  .offer-drive .rdtCounter {
+    width: 40px;
+  }
+
+  .offer-drive .rdtCounterSeparator {
+    line-height: 100px;
+  }
+
+  .offer-drive .rdtCounter .rdtBtn {
+    height: 40%;
+    line-height: 40px;
+    cursor: pointer;
+    display: block;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+  }
+
+  .offer-drive .rdtCounter .rdtBtn:hover {
+    background: #eee;
+  }
+
+  .offer-drive .rdtCounter .rdtCount {
+    height: 20%;
+    font-size: 1.2em;
+  }
+
+  .offer-drive .rdtMilli {
+    vertical-align: middle;
+    padding-left: 8px;
+    width: 48px;
+  }
+
+  .offer-drive .rdtMilli input {
+    width: 100%;
+    font-size: 1.2em;
+    margin-top: 37px;
+  }
+
+  .offer-drive .rdtTime td {
+    cursor: default;
+  }
+}
