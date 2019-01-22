@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { slide as Menu } from 'react-burger-menu'
 
 import './style.css'
 
@@ -12,7 +13,8 @@ class Profile extends Component {
     super(props)
 
     this.state = {
-      person: null
+      person: null,
+      isOpen: false
     }
   }
 
@@ -45,6 +47,12 @@ class Profile extends Component {
     })
   }
 
+  _clickMenu = event => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    })
+  }
+
   render() {
     if (!this.state.person) {
       return <div>Loading...</div>
@@ -70,6 +78,29 @@ class Profile extends Component {
             <Link to="/logout" className="action">
               Log Out
             </Link>
+          </div>
+          <div className="hamburger-menu">
+            <Menu
+              right
+              onStateChange={this._clickMenu}
+              isOpen={this.state.isOpen}
+            >
+              <Link className="action-burger" to="/people/current">
+                Profile
+              </Link>
+              <Link className="action-burger" to="/search">
+                Hitch Drive
+              </Link>
+              <Link className="action-burger" to="/offerdrive">
+                Offer Drive
+              </Link>
+              <Link className="action-burger" to="/mytrips">
+                My Trips
+              </Link>
+              <Link className="action-burger" to="/logout">
+                Log Out
+              </Link>
+            </Menu>
           </div>
         </header>
         <div className="wrapper">

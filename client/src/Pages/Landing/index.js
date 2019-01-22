@@ -83,13 +83,12 @@ class Landing extends Component {
                 <h5>Forget the bus</h5>
                 <p>
                   It's no secret that public transportation is lacking in the
-                  United States of America. It's even more of a problem on
-                  long-distance rides. Buses tend to be slow, smelly, and full
-                  of crazy characters. Don't subject yourself to that kind of
-                  trip when there are literally hundreds of fellow travelers
-                  headed in the same direction you are! Instead of relying on
-                  hopelessly inadequate public transportation, take advantage of
-                  peer-to-peer technology.
+                  United States. It's even more of a problem on long-distance
+                  rides. Buses tend to be slow and uncomfortable. Don't subject
+                  yourself to that kind of trip when there are literally
+                  hundreds of fellow travelers headed in the same direction you
+                  are! Instead of relying on hopelessly inadequate public
+                  transportation, take advantage of peer-to-peer technology.
                 </p>
                 <h5>Save money</h5>
                 <p>
@@ -154,30 +153,29 @@ class Landing extends Component {
               <div className="more-info">
                 <h5>Make a profile</h5>
                 <p>
-                  Drivers on Hitch only drive at their own convenience. If
-                  you're headed home for winter break, why not give someone a
-                  ride on the way? Are you visiting your family for
-                  Thanksgiving? Give a fellow traveler a lift! The magic of
-                  Hitch is that you're both headed to the same destination, so
-                  you might as well carpool.
+                  By logging in with your Google account, Hitch makes it easy
+                  for you to create a profile. Hitch will automatically set your
+                  profile picture, your full name, and your email address. Then
+                  just add your age and a short bio to let fellow hitchhikers
+                  know a little about you!
                 </p>
                 <h5>Find a ride</h5>
                 <p>
-                  Think about it: you could have an empty seat next to you on
-                  your drive, or that seat could be filled and your bank account
-                  could be filled, too! Turn a boring trip between cities into a
-                  money-making opportunity! If you are headed in that direction
-                  either way, you might as well offer a ride and make some easy
-                  money.
+                  Use Hitch to search for rides being offered by your peers. You
+                  can search by a variety of criteria: departure and arrival
+                  location, departure and arrival date, departure and arrival
+                  time, number of seats available, and price per seat. This
+                  gives you the flexibility to choose a ride based on the
+                  criteria most important to your trip.
                 </p>
                 <h5>Offer a drive</h5>
                 <p>
-                  In today's world, technology is connecting an unprecedented
-                  amount of people. Rideshares are no different. Hitchiking is
-                  an opportunity to meet new people and engage in quality
-                  conversation. Offering your vehicle for a drive is opening
-                  yourself and the rider up to a social experience that just
-                  can't be had in an Uber or bus.
+                  To offer a drive, just enter in as much information as you can
+                  about the trip. Choose departure and arrival locations, dates,
+                  and times. Choose how many seats you are offering in the
+                  vehicle. Finally, choose how much you are charging per seat.
+                  You can hammer out finer details by communicating directly to
+                  anyone who wants to hitch a ride with you.
                 </p>
               </div>
             </div>

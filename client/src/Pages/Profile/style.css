@@ -40,6 +40,10 @@
   margin-left: 1rem;
 }
 
+.actions {
+  display: none;
+}
+
 .profile .action {
   margin-right: 2rem;
   border: none;
@@ -49,6 +53,22 @@
   font-size: 1rem;
   text-decoration: none;
   font-weight: bold;
+}
+
+.action-burger {
+  margin-bottom: 1.5rem;
+  border: none;
+  background-color: #373a47;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  outline: none;
+}
+
+.action-burger:hover {
+  color: #007bff;
 }
 
 .profile .action:hover {
@@ -140,7 +160,82 @@
   width: 90%;
 }
 
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 30px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #fff;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #007bff;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2rem 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
 @media only screen and (min-width: 700px) {
+  .actions {
+    display: block;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
   .profile .wrapper {
     width: 100%;
     display: flex;

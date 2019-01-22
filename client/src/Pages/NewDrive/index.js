@@ -7,8 +7,8 @@ class NewDrive extends Component {
   render() {
     return (
       <div>
-        <h1>Thanks for booking a drive!</h1>
-        <h2>
+        <h1 className="thanks">Thanks for booking a drive!</h1>
+        <h2 className="go-back">
           Go back to <Link to="/offerdrive">offering a drive</Link>.
         </h2>
       </div>

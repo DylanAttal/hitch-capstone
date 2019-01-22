@@ -61,7 +61,7 @@
   align-items: center;
 }
 
-.profile-id .profile-id-picture {
+.profile-id .profile-picture {
   height: 380px;
   width: auto;
 }
@@ -91,24 +91,16 @@
   color: #fff;
 }
 
-.profile-id .bio {
-  display: flex;
-  justify-content: center;
+.profile-id .email-info {
+  margin-left: 1rem;
+}
+
+.profile-id .age-info {
+  margin-left: 1rem;
 }
 
 .profile-id .bio-info {
-  width: 100%;
-  padding: 0.5rem;
-}
-
-.profile-id .email {
-  display: flex;
-  justify-content: center;
-}
-
-.profile-id .email-info {
-  width: 100%;
-  padding: 0.5rem;
+  margin-left: 1rem;
 }
 
 @media only screen and (min-width: 700px) {

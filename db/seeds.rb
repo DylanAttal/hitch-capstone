@@ -9,119 +9,119 @@
 Person.create!(first_name: "Max",
               last_name: "Callahan",
               age: 26,
-              bio:"I'm a full stack web developer living in Tampa, Florida. I'm passionate about writing clean code and working on diverse teams. In my spare time I enjoy cooking with my new air-fryer, brewing freshly-ground Kona coffee in my French press, and swimming in Florida's natural springs.",
+              bio:"I'm a full stack web developer living in Tampa, Florida. I'm passionate about writing clean code and working on diverse teams. In my spare time I enjoy cooking with my new air-fryer, brewing freshly-ground Kona coffee in my French press, and swimming in Florida's natural springs. I get inspired by international cuisine and one of my dreams is to travel to Vietnam and learn how to make authentic pho. My pet dog Roscoe is my best friend and most loyal companion. I'm super open-minded and always happy to meet new people and make new friends.",
               email: "callahanmax@gmail.com",
               avatar_url: "https://yt3.ggpht.com/a-/AAuE7mCNAHj116MeTDmUpmoPbUlimKD7_EGWwPknLg=s900-mo-c-c0xffffffff-rj-k-no")
   
 Person.create!(first_name: "Samantha",
               last_name: "Keene",
               age: 22,
-              bio:"I'm a junior web developer working in St. Petersburg, Florida at a small marketing agency specializing in bringing customer metrics and other data analysis to small to medium-sized businesses in the Southeast United States. In my free time I enjoy scuba diving in the Florida Keys, baking cookies, and attending NASCAR events. I am an outgoing person--always looking to meet new people and make new friends!",
+              bio:"I'm a junior web developer working in St. Petersburg, Florida at a small marketing agency specializing in bringing consumer metrics and other data analysis to small to medium-sized businesses in the Southeast United States. In my free time I enjoy scuba diving in the Florida Keys, baking cookies, and attending NASCAR events. I am an outgoing person--always looking to meet new people and make new friends! I currently hold the world record for lowest depth of freedive for an individual below 25 years of age. During that record-breaking dive I actually saw a Hammerhead shark!",
               email: "samanthakeene@gmail.com",
               avatar_url: "http://timedotcom.files.wordpress.com/2017/08/phan-michelle-luisa-dorr-time-firsts-2017.jpg?quality=85&crop=0px%2C0px%2C2405px%2C2405px&resize=600%2C600&strip&zoom=2")
 
 Person.create!(first_name: "Chris",
               last_name: "Northfolk",
               age: 24,
-              bio:"Hey, everyone, I'm Chris, and I'm a regional sales executive working for an alarm installation company in Ocala, Florida. My spare time is totally devoted to my stallion and best friend, Boris. I compete in Dressage about four times a year, and placed second in the regional quarter-finals in 2018.",
+              bio:"Hey, everyone, I'm Chris, and I'm a regional sales executive working for an alarm installation company in Ocala, Florida. My spare time is totally devoted to my stallion and best friend, Boris. I compete in Dressage about four times a year, and placed second in the regional quarter-finals in 2018. I visit my uncle's ranch in Ocala often. I grew up on the farm there, and I love going back to help take care of the animals when I have a spare weekend. My favorite animal to take care of is my childhood friend the pig Wilbur.",
               email: "northfolk46@gmail.com",
               avatar_url: "https://www.chrisbarton.info/images/hero.jpg")
             
 Person.create!(first_name: "Karen",
               last_name: "Tommington",
               age: 28,
-              bio:"Hi, all! I'm Karen, and I'm originally from San Diego, but I'm living and working in Miami now as a marine biologist at the University of Miami. I enjoy going to South Beach whenver possible, and I'm loving the Cuban food in Miami! I've even learned to make tostones from scratch--I'm obsessed with them! I'm always taking trips on the weekends to springs around the state; Rainbow River is my favorite.",
+              bio:"Hi, all! I'm Karen, and I'm originally from San Diego, but I'm living and working in Miami now as a marine biologist at the University of Miami. I enjoy going to South Beach whenver possible, and I'm loving the Cuban food in Miami! I've even learned to make tostones from scratch--I'm obsessed with them! I'm always taking trips on the weekends to springs around the state; Rainbow River is my favorite. I'm planning on making a trip to Cayo Costa soon because I've heard how beautiful the nature preserve out there is. I want to see some dolphins and get in touch with nature by camping.",
               email: "Karentommygirl7@gmail.com",
               avatar_url: "https://cdn.psychologytoday.com/sites/default/files/blogs/33760/2014/07/155910-160590.jpg")
 
 Person.create!(first_name: "Mark",
               last_name: "Tarly",
               age: 35,
-              bio:"Professional boxer who volunteers teaching migrant farm workers' children how to read English in his spare time. Trying to make it to Global Championships in Abu Dhabi in 2020. Currently working part-time to devote most my energy and attention to training--hopefully it pays off. I take day-trips on the weekends around Florida. I like to hit the beaches since I'm from up north and really enjoying the tan I'm getting.",
+              bio:"Professional boxer who volunteers teaching migrant farm workers' children how to read English in his spare time. Trying to make it to Global Championships in Abu Dhabi in 2020. Currently working part-time to devote most my energy and attention to training--hopefully it pays off. I take day-trips on the weekends around Florida. I like to hit the beaches since I'm from up north and really enjoying the tan I'm getting. I don't miss the cold at all. The worst part about living up north was having to shovel snow out of your driveway and scrape ice off your windshield whenever you left your house in the morning.",
               email: "tarlymark@gmail.com",
               avatar_url: "https://media.gq.com/photos/576450aa5db2e8cb18c9e972/master/pass/summer-haircut-1x1.jpg")
 
 Person.create!(first_name: "Kevin",
               last_name: "Rubinson",
               age: 22,
-              bio:"Jacksonville native living the young-20s dream of chilling and surfing on the beach everyday. Just working part-time at an ice cream shop making ends meet. I crash at my friends' places over the weekends, so I'm always on the move and looking for a cheap way to get there. Super friendly guy here. Open-minded. I like talking to people from all walks of life. Hopefully I'll be able to move to Hawaii one day and surf there.",
+              bio:"Jacksonville native living the young-20s dream of chilling and surfing on the beach everyday. Just working part-time at an ice cream shop making ends meet. I crash at my friends' places over the weekends, so I'm always on the move and looking for a cheap way to get there. Super friendly guy here. Open-minded. I like talking to people from all walks of life. Hopefully I'll be able to move to Hawaii one day and surf there. My aunt grew up in Hawaii and passed down the art of surfing to me so I'm looking to honor her memory by moving to Oahu and surfing the same beaches that she learned on.",
               email: "rubinsonkevin40@gmail.com",
               avatar_url: "https://www.menshairstyletrends.com/wp-content/uploads/2017/04/austin.g.lyle-low-man-bun-with-beard-e1491423955633.jpg")
 
 Person.create!(first_name: "Taylor",
               last_name: "Shadwell",
               age: 30,
-              bio:"I'm Taylor Shadwell, a courtroom artist living in Tallahassee, Florida. After graduating from Savannah College of Art and Design and freelancing for several years, I found my passion capturing moments of tension in courtrooms after accompanying my brother to a trial after he was injured by a worksite accident. I spend my free time doodling and writing in my journal. I'm pretty shy, but I open up once I get to know people.",
+              bio:"I'm Taylor Shadwell, a courtroom artist living in Tallahassee, Florida. After graduating from Savannah College of Art and Design and freelancing for several years, I found my passion capturing moments of tension in courtrooms after accompanying my brother to a trial after he was injured by a worksite accident. I spend my free time doodling and writing in my journal. I'm pretty shy, but I open up once I get to know people. I'm really wanting to try one of those nights where you paint in a group and drink wine at the same time. Seems like the best of both worlds.",
               email: "shadwelltaylor210@gmail.com",
               avatar_url: "http://cdn4.spiegel.de/images/image-1344543-1200_amp_square-uame-1344543.jpg")
               
 Person.create!(first_name: "Laura",
               last_name: "Klausner",
               age: 38,
-              bio:"Web developer living and working in Orlando, Florida. Trying to get accustomed to the heat down here! Originally from Philadelphia and lived there for most of my life, but had to move down here for my husband's work. Florida is great except for the humidity and bugs! We're always looking to make a mini-getaway on weekends. Maybe travelling to the Keys this summer to go lobstering. In my spare time I read, bake, and play piano.",
+              bio:"Web developer living and working in Orlando, Florida. Trying to get accustomed to the heat down here! Originally from Philadelphia and lived there for most of my life, but had to move down here for my husband's work. Florida is great except for the humidity and bugs! We're always looking to make a mini-getaway on weekends. Maybe travelling to the Keys this summer to go lobstering. I'm dying to see a coral reef one day. Maybe I can make it to Australia in a couple of years! It would also be really cool to see the kangaroos. In my spare time I read, bake, and play piano.",
               email: "klausnerlaura44@gmail.com",
               avatar_url: "http://pattynomayo.com/wp-content/uploads/2018/06/saynoblkcopy.jpg")
 
 Person.create!(first_name: "Linda",
               last_name: "Sumter",
               age: 40,
-              bio:"Accountant, equestrian, and coffee enthusiast. I have written for a personal finance blog as a hobby for more than seven years. I am passionate about volunteering in my community. Every Wednesday night I serve food at the local Metropolitan Ministries to the homeless. I believe that people are generally good, and I enjoy getting to know people's stories.",
+              bio:"Accountant, equestrian, and coffee enthusiast. I have written for a personal finance blog as a hobby for more than seven years. I am passionate about volunteering in my community. Every Wednesday night I serve food at the local Metropolitan Ministries to the homeless. I believe that people are generally good, and I enjoy getting to know people's stories. I also serve as a lector at my parish. I am a strong believer in the power of faith to bring a community together and promote selflessness. Looking forward to the Thanksgiving food drive this year--hopefully we can beat our previous record of 2,000 lbs of canned food donated!",
               email: "sumterlinda@gmail.com",
               avatar_url: "http://specials-images.forbesimg.com/imageserve/5b44d2434bbe6f1becf1d791/1637x1637.jpg?cropX1=505&cropY1=30&cropX2=2142&cropY2=1667")
 
 Person.create!(first_name: "Kylie",
               last_name: "Okulski",
               age: 19,
-              bio:"Recent high school graduate attending Hillsborough Community College in Tampa, Florida. I'm optimistic, energetic, in shape, straightforward, and friendly. One of my favorite hobbies is scrapbooking. Ever since a third grade project where we had to make a scrapbook commemorating the year, I've constructed one annually to remind me of the highs and lows of the year.",
+              bio:"Recent high school graduate attending Hillsborough Community College in Tampa, Florida. I'm optimistic, energetic, in shape, straightforward, and friendly. One of my favorite hobbies is scrapbooking. Ever since a third grade project where we had to make a scrapbook commemorating the year, I've constructed one annually to remind me of the highs and lows of the year. I shop a lot at thrift stores because I believe that money can buy you clothes but not a fashion sense. A lot of times people don't know what they're throwing away, and you can find designer brands and vintage items for just a few bucks.",
               email: "okulskik@gmail.com",
               avatar_url: "http://pophaircuts.com/images/2017/06/latest-pixie-haircut-designs-chic-short-hairstyles-for-women.jpg")
 
 Person.create!(first_name: "Matt",
               last_name: "Reisman",
               age: 21,
-              bio:"Black belt in karate who works as a karate teacher. Karate has been the most important part of my life for many years. I fell in love with the sport when I was six years old, and I competed all throughout middle and high school. I chose to pursue the sport professionally, but didn't make it to the Olympics, unfortunately. Now, I pass down the skills I learned to younger generations.",
+              bio:"Black belt in karate who works as a karate teacher. Karate has been the most important part of my life for many years. I fell in love with the sport when I was six years old, and I competed all throughout middle and high school. I chose to pursue the sport professionally, but didn't make it to the Olympics, unfortunately. Now, I pass down the skills I learned to younger generations. I'm excited because my younger brother just decided to follow in my footsteps and learn karate at my dojo. I think that karate is a good skill for self-defense. In this day and age you have to be able to protect yourself.",
               email: "reismanmatt23@gmail.com",
               avatar_url: "https://www.celticclothing.com/wp-content/uploads/Quiet-Man-Cap-335-1-1001.jpg")
 
 Person.create!(first_name: "Molly",
               last_name: "Delatre",
               age: 26,
-              bio:"UF grad (Go Gators!) living in Miami. I work as the foreign student coordinator in the University of Miami International Studies Center. I found my passion for experiencing other cultures when I studied abroad in Sevilla, Spain my freshman year of college. Now, I help foreign exchange students experience that same passion I felt while they study here in the United States.",
+              bio:"UF grad (Go Gators!) living in Miami. I work as the foreign student coordinator in the University of Miami International Studies Center. I found my passion for experiencing other cultures when I studied abroad in Sevilla, Spain my freshman year of college. Now, I help foreign exchange students experience that same passion I felt while they study here in the United States. Every week I host an exchange student night at my house. It's a big potluck. Everyone brings a dish from their native country and gets to practice speaking English in front of a friendly group of people as they describe the ingredients in the dish.",
               email: "shadwelltaylor210@gmail.com",
               avatar_url: "https://cdn11.bigcommerce.com/s-fgw3s/images/stencil/1440x1400/products/305/5104/DSC_5679__63766.1537539239.jpg?c=2")
 
 Person.create!(first_name: "Adam",
               last_name: "Baker",
               age: 22,
-              bio:"Senior at the University of South Florida majoring in Architecture. I moved from Wyoming to Florida two years ago because I just had to get out of my hometown in the middle of nowhere rural America. I love Florida so much--I just wish I lived closer to the beach. I hope to move to Miami upon graduating and work for a custom house design and construction company. You can find me in Ybor City on Friday and Saturday nights.",
+              bio:"Senior at the University of South Florida majoring in Architecture. I moved from Wyoming to Florida two years ago because I just had to get out of my hometown in the middle of nowhere rural America. I love Florida so much--I just wish I lived closer to the beach. I hope to move to Miami upon graduating and work for a custom house design and construction company. You can find me in Ybor City on Friday and Saturday nights. One thing that I miss about Wyoming is how much space I had. Tampa is definitely more crowded and traffic and can get really bad around rush hour. I guess that's the price you pay when living in a real city, though.",
               email: "shadwelltaylor210@gmail.com",
               avatar_url: "https://www.menshairstyletrends.com/wp-content/uploads/2017/05/rafa_underground-new-hairstyles-for-men-slick-back-with-flow.jpg")
 
 Person.create!(first_name: "Jose",
               last_name: "Perez",
               age: 26,
-              bio:"Recently graduated from the Federal University of Rio de Janeiro with a Masters of Science in Foreign Relations. Currently living with my parents in Tampa until the fall term of my PhD program at the University of Ohio. Just trying to relax and have fun before I give up my life to the rigors of a PhD program. I enjoy checking out local breweries, getting tea, and going to the beach.",
+              bio:"Recently graduated from the Federal University of Rio de Janeiro with a Masters of Science in Foreign Relations. Currently living with my parents in Tampa until the fall term of my PhD program at the University of Ohio. Just trying to relax and have fun before I give up my life to the rigors of a PhD program. I enjoy checking out local breweries, getting tea, and going to the beach. I think that I'm going to have a lot of free time on my hands until I enter into my PhD program in the fall next year. Hopefully I can make some new friends and have some good times between now and then.",
               email: "joseperez557@gmail.com",
               avatar_url: "https://i.pinimg.com/originals/af/0d/b6/af0db65af7547194ae65e1daf08ef9fd.jpg")
 
 Person.create!(first_name: "Kaylee",
               last_name: "Kourtem",
               age: 25,
-              bio:"Just trying to find my way in life. Outgoing, friendly, exuberant, happy. Interested in finding new friends since I'm new to New Smyrna Beach. Roatrip, anyone? Currently employed as a hairdresser in a local salon. Let me know if you need your hair done!",
+              bio:"Just trying to find my way in life. Outgoing, friendly, exuberant, happy. Interested in finding new friends since I'm new to New Smyrna Beach. Roatrip, anyone? Currently employed as a hairdresser in a local salon. Let me know if you need your hair done! My dream is to one day open my own salon and have complete control over which products I use, which products I choose to sell, how prices are set, and of course, I want to fulfill the American Dream of being a small business owner and experiencing the pride of building up a business from scratch and then selling it for a profit! It's the perfect combination of passion and success.",
               email: "kaykour@gmail.com",
               avatar_url: "https://cdni.rbth.com/rbthmedia/images/2017.11/original/5a14084e85600a1ca3595184.jpg")
 
 Person.create!(first_name: "Jim",
               last_name: "Parsons",
               age: 29,
-              bio:"Graphic artist just returned from the Peace Corps. I've spent the last two years of my life in Tahiti, so I'm looking to reestablish a group of friends in the area. Trying to be open to new experiences and break out of my shell a little. I'm a serious gamer. League of Legends, Fortnite, and PUBG mainly. Big fan of 1950's movies, too. Charlie Chaplin is the man.",
+              bio:"Graphic artist just returned from the Peace Corps. I've spent the last two years of my life in Tahiti, so I'm looking to reestablish a group of friends in the area. Trying to be open to new experiences and break out of my shell a little. I'm a serious gamer. League of Legends, Fortnite, and PUBG mainly. Big fan of 1950's movies, too. Charlie Chaplin is the man. Missing the beaches of Tahiti, but I've got to say that Florida beaches are among the best in the world. Especially the lesser-known beaches and nature preserves like Cayo Costa down south near Naples. The less touristy, the better. Can't stand Clearwater beach these days.",
               email: "graphicartistjim@gmail.com",
               avatar_url: "https://www.atlantaopera.org/wp-content/uploads/2019/01/Headshot_TiggesW.jpg")
 
 Person.create!(first_name: "Ricardo",
               last_name: "Hernandez",
               age: 26,
-              bio:"Pursuing my dream of being the lead singer in a rock band. Feeling grateful that we just landed a record deal with a minor label. Touring around the northeast in the summer, so just enjoying my last couple of months in sunny Florida. Peace and love.",
+              bio:"Pursuing my dream of being the lead singer in a rock band. Feeling grateful that we just landed a record deal with a minor label. Touring around the northeast in the summer, so just enjoying my last couple of months in sunny Florida. My favorite joint around here is Skippers. It's the only place where you can find down to earth people just enjoying life. I actually got my first big break there several years ago. Just trying to promote peace and love through my music. If I can make a few bucks from it, then all the better. Looking to make some weekend getaways before I start touring full time in a couple of months.",
               email: "hernandezrico@gmail.com",
               avatar_url: "https://www.menshairstyletrends.com/wp-content/uploads/2016/12/whitneyvermeer-haircuts-for-wavy-hair-men-burst-fade-e1489530242707.jpg")
               
