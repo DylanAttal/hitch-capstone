@@ -87,14 +87,14 @@ Person.create!(first_name: "Molly",
               last_name: "Delatre",
               age: 26,
               bio:"UF grad (Go Gators!) living in Miami. I work as the foreign student coordinator in the University of Miami International Studies Center. I found my passion for experiencing other cultures when I studied abroad in Sevilla, Spain my freshman year of college. Now, I help foreign exchange students experience that same passion I felt while they study here in the United States. Every week I host an exchange student night at my house. It's a big potluck. Everyone brings a dish from their native country and gets to practice speaking English in front of a friendly group of people as they describe the ingredients in the dish.",
-              email: "shadwelltaylor210@gmail.com",
+              email: "delatremolly32@gmail.com",
               avatar_url: "https://cdn11.bigcommerce.com/s-fgw3s/images/stencil/1440x1400/products/305/5104/DSC_5679__63766.1537539239.jpg?c=2")
 
 Person.create!(first_name: "Adam",
               last_name: "Baker",
               age: 22,
               bio:"Senior at the University of South Florida majoring in Architecture. I moved from Wyoming to Florida two years ago because I just had to get out of my hometown in the middle of nowhere rural America. I love Florida so much--I just wish I lived closer to the beach. I hope to move to Miami upon graduating and work for a custom house design and construction company. You can find me in Ybor City on Friday and Saturday nights. One thing that I miss about Wyoming is how much space I had. Tampa is definitely more crowded and traffic and can get really bad around rush hour. I guess that's the price you pay when living in a real city, though.",
-              email: "shadwelltaylor210@gmail.com",
+              email: "bakeradam11@gmail.com",
               avatar_url: "https://www.menshairstyletrends.com/wp-content/uploads/2017/05/rafa_underground-new-hairstyles-for-men-slick-back-with-flow.jpg")
 
 Person.create!(first_name: "Jose",
