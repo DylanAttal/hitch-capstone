@@ -54,7 +54,7 @@ class ProfileID extends Component {
                 Profile
               </Link>
               <Link className="action-burger" to="/search">
-                Hitch Drive
+                Hitch Ride
               </Link>
               <Link className="action-burger" to="/offerdrive">
                 Offer Drive
