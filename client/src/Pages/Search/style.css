@@ -338,14 +338,14 @@ html {
   }
 
   .search .card-preview {
-    width: 440px;
+    width: 430px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 0.7rem;
     border: 1.2px solid black;
     border-radius: 4px;
-    margin: 5px;
+    margin: 0.5rem;
     background-color: #fff;
   }
 
