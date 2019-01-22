@@ -10,7 +10,11 @@ class NewDrive extends Component {
       <div className="new">
         <h1 className="thanks">Thanks for booking a drive!</h1>
         <h2 className="go-back">
-          Go back to <Link to="/offerdrive">offering a drive</Link>.
+          Go back to{' '}
+          <Link className="go-back-link" to="/offerdrive">
+            offering a drive
+          </Link>
+          .
         </h2>
         <img src={carWithDriver} className="car_with_driver" />
       </div>

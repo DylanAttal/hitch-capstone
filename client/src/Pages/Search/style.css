@@ -83,6 +83,22 @@ html {
 .search .locations {
   margin-top: 1rem;
   margin-left: 1rem;
+  margin-bottom: 0;
+}
+
+.sub-title {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  font-size: 0.85rem;
+}
+
+.datetime-title {
+  margin-bottom: 0;
+}
+
+.sub-title-date {
+  margin-top: 0.4rem !important;
+  font-size: 0.85rem;
 }
 
 .search-map {
@@ -304,6 +320,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: rgba(0, 0, 0, 0.3);
 }
 
+.smaller {
+  font-size: 0.8rem;
+}
+
+.search .seats select {
+  margin-left: 0.5rem;
+}
+
 @media only screen and (min-width: 700px) {
   .search .wrapper {
     width: 100%;
@@ -312,6 +336,22 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
   .search .locations {
     font-size: 1.5rem;
+  }
+
+  .sub-title {
+    font-size: 1rem;
+  }
+
+  .sub-title-date {
+    font-size: 1rem !important;
+  }
+
+  .smaller {
+    font-size: 1rem;
+  }
+
+  .datetime-title {
+    margin-top: 1rem !important;
   }
 
   .search-map {
@@ -372,7 +412,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 
   .search .seats select {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     font-size: 1rem;
   }
 

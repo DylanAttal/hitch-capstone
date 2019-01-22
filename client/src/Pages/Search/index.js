@@ -141,6 +141,9 @@ class Search extends Component {
                   <section className="maps">
                     <div className="map-div-1">
                       <p className="locations">Departure Location</p>
+                      <p className="sub-title">
+                        <em>within 50 miles</em>
+                      </p>
                       <Map
                         className="search-map"
                         onClick={this._clickDepartureMap}
@@ -148,6 +151,9 @@ class Search extends Component {
                     </div>
                     <div className="map-div-2">
                       <p className="locations">Arrival Location</p>
+                      <p className="sub-title">
+                        <em>within 50 miles</em>
+                      </p>
                       <Map
                         className="search-map"
                         onClick={this._clickArrivalMap}
@@ -156,7 +162,10 @@ class Search extends Component {
                   </section>
                   <section className="datetimes">
                     <div className="departure-date-time">
-                      <p>Departure Date and Time</p>
+                      <p className="datetime-title">Departure Date and Time</p>
+                      <p className="sub-title-date">
+                        <em>within 6 hours</em>
+                      </p>
                       <DateTime
                         dateFormat="YYYY-MM-DD"
                         inputProps={{
@@ -166,7 +175,10 @@ class Search extends Component {
                       />
                     </div>
                     <div className="arrival-date-time">
-                      <p>Arrival Date and Time</p>
+                      <p className="datetime-title">Arrival Date and Time</p>
+                      <p className="sub-title-date">
+                        <em>within 6 hours</em>
+                      </p>
                       <DateTime
                         dateFormat="YYYY-MM-DD"
                         inputProps={{
@@ -178,7 +190,10 @@ class Search extends Component {
                   </section>
                   <div className="seats">
                     <label htmlFor="number_of_seats_available">
-                      Number of seats available
+                      Number of seats available{' '}
+                      <span className="smaller">
+                        <em>or less</em>
+                      </span>
                     </label>
                     <select name="trip[number_of_seats_available]">
                       <option>1</option>
@@ -192,7 +207,13 @@ class Search extends Component {
                     </select>
                   </div>
                   <div className="price">
-                    <label htmlFor="price_per_seat">Price per seat $</label>
+                    <label htmlFor="price_per_seat">
+                      Price per seat{' '}
+                      <span className="smaller">
+                        <em>or less</em>
+                      </span>{' '}
+                      $
+                    </label>
                     <input type="number" name="trip[price_per_seat]" />
                   </div>
                   <div className="create-drive-div">

@@ -55,7 +55,7 @@ class Landing extends Component {
                 </div>
               </div>
               <div className="sub-header">
-                <span>H I T C H I K I N G</span> <span>f o r</span>{' '}
+                <span>H I T C H H I K I N G</span> <span>f o r</span>{' '}
                 <span>t h e </span> <span>2 1 s t</span>{' '}
                 <span>C E N T U R Y</span>
               </div>

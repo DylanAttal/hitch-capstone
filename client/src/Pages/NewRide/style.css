@@ -8,6 +8,10 @@
   margin-bottom: 3rem;
 }
 
+.go-back-link {
+  color: #000;
+}
+
 .new {
   display: flex;
   flex-direction: column;

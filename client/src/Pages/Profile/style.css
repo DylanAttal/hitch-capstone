@@ -227,6 +227,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: rgba(0, 0, 0, 0.3);
 }
 
+.profile textarea {
+  height: 100px;
+  width: 300px;
+}
+
+.profile .bio-button {
+  width: 307px;
+  margin-bottom: 2rem;
+}
+
 @media only screen and (min-width: 700px) {
   .actions {
     display: block;
@@ -281,5 +291,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
   .profile .bio-info {
     margin-bottom: 1rem;
+  }
+
+  .profile textarea {
+    height: 200px;
+    width: 400px;
+  }
+
+  .profile .bio-button {
+    width: 407px;
   }
 }

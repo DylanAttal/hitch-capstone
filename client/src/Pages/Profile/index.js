@@ -127,7 +127,9 @@ class Profile extends Component {
                 <p className="email-info">{this.state.person.email}</p>
               </div>
               <div className="age-div">
-                <p className="age-info">{this.state.person.age} years old</p>
+                <p className={!this.state.person.age ? 'hidden' : 'age-info'}>
+                  {this.state.person.age} years old
+                </p>
               </div>
               <div className="bio-div">
                 <p className="bio-info">{this.state.person.bio}</p>
@@ -160,7 +162,7 @@ class Profile extends Component {
                 <button
                   className={
                     !this.state.person.bio && !this.state.person.age
-                      ? 'bio'
+                      ? 'bio-button'
                       : 'hidden'
                   }
                 >
