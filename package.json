@@ -6,6 +6,7 @@
   "scripts": {
     "build": "cd client && npm install && npm run build && cd ..",
     "deploy": "cp -a client/build/. public/",
-    "postinstall": "npm run build && npm run deploy"
-  }
+    "heroku-postbuild": "npm run build && npm run deploy"
+  },
+  "heroku-run-build-script": true
 }
